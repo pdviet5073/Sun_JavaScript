@@ -1,0 +1,68 @@
+extends ../base/base.pug
+
+include ../components/portfolio.pug
+include ../partials/mixin.pug
+
+block variables
+    //- insert from data.pug
+    - var productPortfolio = productPortfolio
+    - var hotNewsData = hotNews
+    - var blogTagData = blogTag
+    - var newsData = news.pageNews
+
+mixin pageNewsItem({src,title,date, time, comment, desc })
+        .page-news__item 
+            .page-news__title
+                h3
+                    a(href="/detailNews.html")= title
+            .page-news__date-time 
+                span 
+                    i.far.fa-calendar-minus
+                    | #{date}
+                span 
+                    i.far.fa-clock
+                    | #{time}
+                span 
+                    i.far.fa-comment-dots
+                    | #{comment} Bình luận
+            .page-news__img
+                a(href="/detailNews.html")
+                    img(src=`./assets/images/${src}.png`, alt="anh-news")  
+            .page-news__desc
+                p.text-clamp.text-clamp--4= desc
+
+mixin portfolioItem 
+    section.portfolio__hot-new
+        +title("Tin tức nổi bật")
+        ul.portfolio__hot-new-list
+            each item in hotNewsData
+                li.portfolio__hot-new-item  
+                    a(href="#")
+                        img(src=`./assets/images/${item.src}.png`, alt="anh-hot-new") 
+                        span= item.title
+    section.portfolio__tag
+        +title("Blog tag")
+        ul.portfolio__tag-list 
+            each item in blogTagData
+                li.portfolio__tag-item 
+                    a(href="/detailNews.html")= item 
+
+block content
+    .page-news
+        .container 
+            +page("Cây Dạ Lam")
+            .row 
+                .col-lg-3.col-md-4.d-md-block.d-none
+                    section.portfolio
+                            +portfolio("portfolio-product",productPortfolio, "Danh mục sản phẩm" )
+                            +portfolioItem
+                .col-lg-9.col-md-8.col-12
+                    block contentNews
+                        article.page-news__container 
+                            .page-news__content 
+                                each item in newsData
+                                    +pageNewsItem(item)
+                                include ../components/pagination.pug
+                            .d-md-none.d-block
+                                +portfolioItem
+                        

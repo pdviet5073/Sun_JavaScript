@@ -1,0 +1,483 @@
+-
+    var socials = ['fab fa-facebook-f', 'fab fa-twitter', 'fab fa-telegram-plane', 'fab fa-linkedin-in']
+
+-
+    var menu = [
+        {
+            title : "Trang chủ",
+            link: "/",
+            dropdown: false
+        },
+        {
+            title : "Giới thiệu",
+            link: "",
+            dropdown: false
+        },
+        {
+            title : "Sản phẩm",
+            link: "/products.html",
+            dropdown: true
+        },
+        {
+            title : "Sản phẩm mới",
+            link: "",
+            dropdown: true
+        },
+        {
+            title : "Tin Tức",
+            link: "/news.html",
+            dropdown: false
+        },
+        {
+            title : "Liên hệ",
+            link: "/contact.html",
+            dropdown: false
+        }
+    ]
+
+-
+    var carousel =["./assets/images/slide.png","./assets/images/slide.png","./assets/images/slide.png"]
+
+-
+    var footer = {
+        content: [
+            {
+                title :"Thông tin khách hàng",
+                list:["Tài khoản của tôi", "Sản phẩm yêu thích", "Lịch sử mua hàng", "Chính sách đổi trả", "Góp ý, khiếu nại"]
+            },
+            {
+                title :"Hỗ trợ dịch vụ",
+                list:["Hệ thống cửa hàng", "Hướng dẫn mua hàng", "Hướng dẫn thanh toán", "Tích điểm đổi quà", "Câu hỏi thường gặp"]
+            },
+            {
+                title :"Chính sách ưu đãi",
+                list:["Chính sách giao hàng","Chính sách đổi trả sản phẩm", "Chính sách bảo hành", "Giới thiệu sản phẩm mới", "Chính sách trả góp"]
+            },
+            {
+                title :"Tin tức",
+                list:["Tin mới", "Khuyến mại", "Tuyển dụng", "Download", "Tags"]
+            }
+        ],
+        footerBottom: {
+            title: ["Sitemap", "Danh mục sản phẩm", "Hợp tác", "Thông tin liên hệ", "Câu hỏi thường gặp"],
+            icon: ["fab fa-cc-visa", "fab fa-cc-mastercard", "fab fa-cc-paypal" ]
+        }
+    }
+
+-
+    var productPortfolio = ["Cây chậu treo ( 10 )", "Cây có hoa ( 5 )","Cây dây leo", "Cây để bàn", "Cây may mắn", "Cây trang trí", "Cây nội thất"]
+
+
+-
+    sortPrice = ["200.000 Đ - 400.000 Đ","400.000 Đ - 600.000 Đ","600.000 Đ - 800.000 Đ","800.000 Đ - 1.000.000 Đ","1.000.000 Đ - 1.200.000 Đ",]
+
+
+-
+    var sortColor = [
+        {
+            hex: "#98cb4a",
+            name: "Xanh cây"
+        },
+        {
+            hex: "#f76d3c",
+            name: "Đỏ cam"
+        },
+        {
+            hex: "#913ccd",
+            name: "Tím"
+        },
+        {
+            hex: "#5481e6",
+            name: "Xanh trời"
+        },
+        {
+            hex: "#f7d946",
+            name: "Vàng"
+        },
+        {
+            hex: "#f15f74",
+            name: "Hồng"
+        },
+    ]
+
+-
+    var products = {
+        hotProducts: [
+            {
+                discount: "New",
+                src: "spx2-1",
+                name:"Cây chân chim",
+                rate: 1.5,
+                currentPrice: "250.000",
+                oldPrice: "250.000"
+            },
+            {
+                discount: "-50%",
+                src: "spx2-2",
+                name:"Cây Dạ Lam",
+                rate: 4.5,
+                currentPrice: "500.000",
+                oldPrice: "250.000"
+            },
+            {
+                discount: "New",
+                src: "spx2-3",
+                name:"Cây Danh Dự",
+                rate: 5,
+                currentPrice: "850.000",
+                oldPrice: "250.000"
+            },
+            {
+                src: "spx2-4",
+                name:"Cây cọ ta",
+                rate: 2.5,
+                currentPrice: "150.000",
+                oldPrice: "250.000"
+            },
+            {
+                src: "spx2-5",
+                name:"Cây dứa nhỏ",
+                rate:4.5 ,
+                currentPrice: "350.000",
+                oldPrice: "250.000"
+            },
+            {
+                discount: "-50%",
+                src: "spx2-6",
+                name:"Cây đa búp đỏ",
+                rate: 4.5,
+                currentPrice: "1.000.000",
+                oldPrice: "250.000"
+            }
+        ], 
+        popularProducts: [
+            {
+                src: "spx2-2",
+                name:"Cây chân chim",
+                rate: 4.5,
+                currentPrice: "250.000",
+            },
+            {
+                src: "spx2-3",
+                name:"Cây Dạ Lam",
+                rate: 4.5,
+                currentPrice: "100.000",
+            },
+            {
+                src: "spx2-4",
+                name:"Cây Danh Dự",
+                rate: 4.5,
+                currentPrice: "850.000",
+            },
+            {
+                src: "spx2-5",
+                name:"Cây cọ ta",
+                rate: 4.5,
+                currentPrice: "150.000",
+            },
+            {
+                src: "spx2-6",
+                name:"Cây dứa nhỏ",
+                rate:4.5 ,
+                currentPrice: "350.000",
+            },
+            {
+                src: "spx2-7",
+                name:"Cây đa búp đỏ",
+                rate: 4.5,
+                currentPrice: "600.000",
+            },
+        ],
+        newProducts: [
+            {
+                discount: "New",
+                src: "spx2-1",
+                name:"Cây chân chim",
+                rate: 4.5,
+                currentPrice: "250.000",
+                oldPrice: "250.000",
+                desc: 'Cây Ngọc Ngân là loại cây dành cho tình yêu! Đây là món quà bất ngờ để bạn tặng "Người ấy". Ngọc Ngân (Valentiane) không chỉ đẹp ở phiến lá xanh đốm trắng.',
+            },{
+                src: "spx2-2",
+                name:"Cây chân chim",
+                rate: 4.5,
+                currentPrice: "250.000",
+                oldPrice: "250.000",
+                desc: 'Cây Ngọc Ngân là loại cây dành cho tình yêu! Đây là món quà bất ngờ để bạn tặng "Người ấy". Ngọc Ngân (Valentiane) không chỉ đẹp ở phiến lá xanh đốm trắng.',
+            },
+            {
+                discount: "New",
+                src: "spx2-3",
+                name:"Cây chân chim",
+                rate: 4.5,
+                currentPrice: "250.000",
+                oldPrice: "250.000",
+                desc: 'Cây Ngọc Ngân là loại cây dành cho tình yêu! Đây là món quà bất ngờ để bạn tặng "Người ấy". Ngọc Ngân (Valentiane) không chỉ đẹp ở phiến lá xanh đốm trắng.',
+            },
+            {
+                src: "spx2-4",
+                name:"Cây xương rồng",
+                rate: 4.5,
+                currentPrice: "250.000",
+                oldPrice: "250.000",
+                desc: 'Cây Ngọc Ngân là loại cây dành cho tình yêu! Đây là món quà bất ngờ để bạn tặng "Người ấy". Ngọc Ngân (Valentiane) không chỉ đẹp ở phiến lá xanh đốm trắng.',
+            },
+            {
+                src: "spx2-5",
+                name:"Cây Dạ Lam",
+                rate: 4.5,
+                currentPrice: "250.000",
+                oldPrice: "250.000",
+                desc: 'Cây Ngọc Ngân là loại cây dành cho tình yêu! Đây là món quà bất ngờ để bạn tặng "Người ấy". Ngọc Ngân (Valentiane) không chỉ đẹp ở phiến lá xanh đốm trắng.',
+            },
+            {
+                discount: "-45%",
+                src: "spx2-6",
+                name:"Cây Danh Dự",
+                rate: 4.5,
+                currentPrice: "250.000",
+                oldPrice: "250.000",
+                desc: 'Cây Ngọc Ngân là loại cây dành cho tình yêu! Đây là món quà bất ngờ để bạn tặng "Người ấy". Ngọc Ngân (Valentiane) không chỉ đẹp ở phiến lá xanh đốm trắng.',
+            },
+            {
+                src: "spx2-7",
+                name:"Cây cọ ta",
+                rate: 4.5,
+                currentPrice: "250.000",
+                oldPrice: "250.000",
+                desc: 'Cây Ngọc Ngân là loại cây dành cho tình yêu! Đây là món quà bất ngờ để bạn tặng "Người ấy". Ngọc Ngân (Valentiane) không chỉ đẹp ở phiến lá xanh đốm trắng.',
+            },
+            {
+                src: "spx2-8",
+                name:"Cây Dạ Lam",
+                rate: 4.5,
+                currentPrice: "250.000",
+                oldPrice: "250.000",
+                desc: 'Cây Ngọc Ngân là loại cây dành cho tình yêu! Đây là món quà bất ngờ để bạn tặng "Người ấy". Ngọc Ngân (Valentiane) không chỉ đẹp ở phiến lá xanh đốm trắng.',
+            },
+            {
+                src: "spx2-9",
+                name:"Cây dứa nhỏ",
+                rate:4.5 ,
+                currentPrice: "280.000",
+                oldPrice: "250.000",
+                desc: 'Cây Ngọc Ngân là loại cây dành cho tình yêu! Đây là món quà bất ngờ để bạn tặng "Người ấy". Ngọc Ngân (Valentiane) không chỉ đẹp ở phiến lá xanh đốm trắng.',
+            },
+            {
+                src: "spx2-10",
+                name:"Cây đa búp đỏ",
+                rate: 4.5,
+                currentPrice: "280.000",
+                oldPrice: "250.000",
+                desc: 'Cây Ngọc Ngân là loại cây dành cho tình yêu! Đây là món quà bất ngờ để bạn tặng "Người ấy". Ngọc Ngân (Valentiane) không chỉ đẹp ở phiến lá xanh đốm trắng.',
+            },
+            {
+                src: "spx2-11",
+                name:"Cây Dạ Lam",
+                rate: 4.5,
+                currentPrice: "250.000",
+                oldPrice: "250.000",
+                desc: 'Cây Ngọc Ngân là loại cây dành cho tình yêu! Đây là món quà bất ngờ để bạn tặng "Người ấy". Ngọc Ngân (Valentiane) không chỉ đẹp ở phiến lá xanh đốm trắng.',
+            },
+            {
+                src: "spx2-12",
+                name:"Cây dứa nhỏ",
+                rate:4.5 ,
+                currentPrice: "280.000",
+                oldPrice: "250.000",
+                desc: 'Cây Ngọc Ngân là loại cây dành cho tình yêu! Đây là món quà bất ngờ để bạn tặng "Người ấy". Ngọc Ngân (Valentiane) không chỉ đẹp ở phiến lá xanh đốm trắng.',
+            },
+            {
+                src: "spx2-13",
+                name:"Cây đa búp đỏ",
+                rate: 4.5,
+                currentPrice: "280.000",
+                oldPrice: "250.000",
+                desc: 'Cây Ngọc Ngân là loại cây dành cho tình yêu! Đây là món quà bất ngờ để bạn tặng "Người ấy". Ngọc Ngân (Valentiane) không chỉ đẹp ở phiến lá xanh đốm trắng.',
+            },
+            {
+                src: "spx2-14",
+                name:"Cây đa búp đỏ",
+                rate: 4.5,
+                currentPrice: "280.000",
+                oldPrice: "250.000",
+                desc: 'Cây Ngọc Ngân là loại cây dành cho tình yêu! Đây là món quà bất ngờ để bạn tặng "Người ấy". Ngọc Ngân (Valentiane) không chỉ đẹp ở phiến lá xanh đốm trắng.',
+            },
+            {
+                src: "spx2-15",
+                name:"Cây đa búp đỏ",
+                rate: 4.5,
+                currentPrice: "280.000",
+                oldPrice: "250.000",
+                desc: 'Cây Ngọc Ngân là loại cây dành cho tình yêu! Đây là món quà bất ngờ để bạn tặng "Người ấy". Ngọc Ngân (Valentiane) không chỉ đẹp ở phiến lá xanh đốm trắng.',
+            }
+        ]
+    }
+
+-
+    var news= {
+        home: [
+            {
+                src: "new-4.png",
+                date:" Thứ 7, ngày 31, tháng 12, năm 2015",
+                title: "15 thiết kế phòng ngủ tuyệt đẹp vạn người mê",
+                content: "Cùng Sài Gòn tìm hiểu một vài xu hướng thiết kế sân vườn được ưa chuộng hiện nay nhé! Kết hợp hàng rào. ",
+            },
+            {
+                src: "new-2.png",
+                date:" Thứ 7, ngày 31, tháng 12, năm 2015",
+                title: "Tạo tiểu cảnh góc sân nhà phố, biệt thự đẹp",
+                content: "Khi bước từ ngoài ngõ vào hay từ trong nhà đi ra, góc sân luôn là điểm nhìn đầu tiên của chúng ta."
+            },
+            {
+                src: "new-3.png",
+                date:" Thứ 7, ngày 31, tháng 12, năm 2015",
+                title: "Cách bố trí hoa chậu trước cửa ấn tượng",
+                content: "Như thể hiện sự thân thiện cũng như sự hiếu khách của gia chủ, phần không gian trước cửa."
+            }
+        ],
+        pageNews: [
+            {
+                src: "new-3",
+                title: "Cách bố trí hoa chậu trước cửa ấn tượng ngay lần đầu tiên",
+                date:"20/12/2015",
+                time:"11:20:00 AM",
+                comment: 0,
+                desc:"Như thể hiện sự thân thiệ cũng như sự hiếu khách của gia chủ, phần không gian trước cửa nhà luôn được đầu tư và trang trí khá bắt mắt. Cũng có thể nói đây là bộ mặt của ngôi nhà, là ấn tượng đầu tiên khi một vị khách ghé chơi nhà bạn đấy. Hãy cùng Sài Gòn Hoa tham khảo một vài cách bố trí chậu cây hoa cảnh ngay trước của nhà sao cho ấn tượng nhất nhé"
+            },
+            {
+                src: "new-4",
+                title: "Hướng dẫn lựa chọn và bố trí cây xanh trong phòng khách",
+                date:"20/12/2015",
+                time:"11:20:00 AM",
+                comment: 0,
+                desc:"Như thể hiện sự thân thiệ cũng như sự hiếu khách của gia chủ, phần không gian trước cửa nhà luôn được đầu tư và trang trí khá bắt mắt. Cũng có thể nói đây là bộ mặt của ngôi nhà, là ấn tượng đầu tiên khi một vị khách ghé chơi nhà bạn đấy. Hãy cùng Sài Gòn Hoa tham khảo một vài cách bố trí chậu cây hoa cảnh ngay trước của nhà sao cho ấn tượng nhất nhé"
+            },
+            {
+                src: "new-5",
+                title: "7 loại cây xanh để bàn đang được giới văn phòng ưa chuộng",
+                date:"20/12/2015",
+                time:"11:20:00 AM",
+                comment: 0,
+                desc:"Như thể hiện sự thân thiệ cũng như sự hiếu khách của gia chủ, phần không gian trước cửa nhà luôn được đầu tư và trang trí khá bắt mắt. Cũng có thể nói đây là bộ mặt của ngôi nhà, là ấn tượng đầu tiên khi một vị khách ghé chơi nhà bạn đấy. Hãy cùng Sài Gòn Hoa tham khảo một vài cách bố trí chậu cây hoa cảnh ngay trước của nhà sao cho ấn tượng nhất nhé"
+            }
+        ],
+        detailNews: {
+            
+        }
+    }
+
+-
+    var productDetail = {
+        src:"./assets/images/spx2-15.png",
+        slideImages: [
+            {src: "spx2-1"},
+            {src: "spx2-2"},
+            {src: "spx2-3"},
+            {src: "spx2-4"},
+            {src: "spx2-5"},
+            {src: "spx2-6"},
+            {src: "spx2-7"},
+            {src: "spx2-8"},
+            {src: "spx2-9"},
+            {src: "spx2-10"},
+        ],
+        name: "Cây Dạ Lam",
+        rate: 5,
+        currentPrice: "4.099.000",
+        oldPrice: "4.099.000",
+        desc: "Cây mọc thành bụi thưa, thân vươn thẳng với chiều cao cây trung bình từ 0,8-1,2m. Lá hình trứng, mép lá nguyên, gân lá nổi rõ, phiến rộng khoảng từ 15-20xm. Lá có màu xanh đậm ở mặt trên, quanh gân lá có màu trắng sữa,, mặt dưới lá có màu nhạt hơn. Lá cây dạ lam mọc cách cuống lá dài khi rụng để lại các khía màu nâu nhạt.",
+        info: {
+            commonName:"Dạ lam",
+            scienceName:"Calathea xebrina",
+            plantFamily:"Marataceae (Củ dong)",
+            height: "0,8 - 1m2",
+            roots:"Cây dạ lam có nguồn gốc từ Brazil, được du nhập và pân bố rộng khắp ở Việt Nam",
+            desc:"Cây mọc thành bụi thưa, thân vươn thẳng với chiều cao cây trung bình từ 0,8-1,2m. Lá hình trứng, mép lá nguyên, gân lá nổi rõ, phiến rộng khoảng từ 15-20xm. Lá có màu xanh đậm ở mặt trên, quanh gân lá có màu trắng sữa,, mặt dưới lá có màu nhạt hơn. Lá cây dạ lam mọc cách cuống lá dài khi rụng để lại các khía màu nâu nhạt."
+        }
+    }
+
+-
+    var cart = {
+        title:['Hình ảnh', 'Tên sản phẩm', 'Đơn giá', 'Số lượng', 'Thành tiền', 'Xoá'],
+        products: [
+            {
+                src: "spx2-2",
+                name:"Cây Văn Phòng",
+                currentPrice: "270.000",
+                amount: 1,
+                total: "270.000"
+            },
+            {
+                src: "spx2-2",
+                name:"Cây Văn Phòng",
+                currentPrice: "270.000",
+                amount: 1,
+                total: "270.000"
+            },
+            {
+                src: "spx2-2",
+                name:"Cây Văn Phòng",
+                currentPrice: "270.000",
+                amount: 1,
+                total: "270.000"
+            },
+        ]
+    }
+
+-
+    var blogTag = ["Cây văn phòng", "Cây phát lộc", "Cây xanh", "Cây trang trí", "Cây", "Plants", "Sức khoẻ", "Quà tặng", "Lưu niệm"]
+
+-
+    var hotNews = [
+        {
+            src: "new-3",
+            title :"Hướng dẫn lựa chọn và bố trí cây xanh trong phòng khách"
+        },
+        {
+            src: "new-4",
+            title :"Những sai lầm nên tránh khi bố trí cây xanh trong nhà"
+        },
+        {
+            src: "new-5",
+            title :"7 loại cây xanh để bàn được ưa chuộng"
+        },
+        {
+            src: "new-6",
+            title :"Hướng dẫn lựa chọn và bố trí cây xanh trong phòng khách"
+        },
+        {
+            src: "new-7",
+            title :"4 loại cây cảnh thích hợp bày trí ở khu vực đại sảnh"
+        },
+    ]
+
+-
+    var comments =[
+        {
+            id:1,
+            avatar: "./assets/images/avatar.jpg", 
+            author:"Nguyễn Văn An",
+            status:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum totam praesentium ea commodi repudiandae quaerat! Officiis earum similique ad temporibus iure, pariatur nobis iusto perferendis nemo cum laboriosam dignissimos perspiciatis.",
+            createAt: "Thứ 7, 26/12/2015 12: 00 AM",
+            
+        }, 
+        {
+            id:2,
+            avatar: "./assets/images/avatar.jpg", 
+            author: "Nguyễn Văn An",
+            status:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum totam praesentium ea commodi repudiandae quaerat! Officiis earum similique ad temporibus iure, pariatur nobis iusto perferendis nemo cum laboriosam dignissimos perspiciatis.",
+            createAt: "Thứ 7, 26/12/2015 12: 00 AM",
+        } 
+    ]
+
+-
+    var reComment = [
+        {
+            commentId:1,
+            avatar: "./assets/images/avatar.jpg", 
+            author:"Nguyễn Văn An",
+            status:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum totam praesentium ea commodi repudiandae quaerat! Officiis earum similique ad temporibus iure, pariatur nobis iusto perferendis nemo cum laboriosam dignissimos perspiciatis.",
+            createAt: "Thứ 7, 26/12/2015 12: 00 AM",
+        }
+    ] 

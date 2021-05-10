@@ -1,0 +1,28 @@
+.logIn {
+    padding-bottom: 7rem;
+    color: $dark-gray;
+
+    &__title {
+        @extend .register__title;
+    }
+    &__desc {
+        font-size: 1.3rem;
+    }
+    .input {
+        &__item {
+            i {
+                display: none;
+            }
+
+            &-checkbox {
+                margin-left: 0;
+                label {
+                    color: $light-black;
+                }
+                .input {
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+}

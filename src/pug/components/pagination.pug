@@ -1,0 +1,8 @@
+.pagination 
+    .pagination__container
+        form(action="#") 
+            ul.pagination__content
+                - var pagination = ['Trang đầu', '1', '2', '3', '4', 'Trang cuối']
+                    each item, index in pagination 
+                        li(class=`pagination__item ${index==1 ? 'pagination__item-active' : ''}`) 
+                            button.pagination__button(type='button')= item

@@ -1,0 +1,43 @@
+include mixin.pug
+include ../components/logo.pug
+
+header.header
+    .header__top 
+        .container 
+            .row 
+                .col-lg-7.col-4.text-left.d-flex.align-items-center
+                    .header_time
+                        i(class="far fa-clock")
+                        span Open time 8:00 - 18:00 Monday - Sunday
+                    .header__social 
+                        each social, index in socials
+                            +icon(social)
+                .col-lg-5.col-8.text-right.d-flex.align-items-center.justify-content-end
+                    .header__log-in.header__top-icon
+                        i(class="fas fa-user") 
+                        a(href="logIn.html")  Đăng nhập
+                    .header-log-out.header__top-icon
+                        i(class="fas fa-user-plus") 
+                        a(href="register.html")  Đăng ký
+    .header__main(style="background-image:url('./assets/background/bg-1.png')") 
+        .container 
+            .row
+                .col-md-5
+                    +logo
+                .col-md-6.offset-md-1.d-flex.justify-content-end.align-items-center
+                    .header__search
+                        p.header__phone 
+                            i(class="fas fa-phone-alt")
+                            span Hỗ trợ : (04) 6675 2323 - (04) 3453 5335
+                        .header__search-form
+                            form(action="#")
+                                input(type="text", placeholder=" Tìm kiếm...")
+                                button.button
+                                    i(class="fas fa-search")
+                    .header__cart
+                        button.button
+                            a.position-relative(href="cart.html")
+                                i(class="fas fa-shopping-cart")
+                                span.header__cart-count 0 
+                                    span Sản phẩm 
+    include ../components/navigation.pug

@@ -1,0 +1,59 @@
+include mixin.pug
+include ../components/logo.pug
+
+footer.footer 
+    .footer__top 
+        .container 
+            .row 
+                .col-md-4 
+                    .footer__social 
+                        h3.footer__social-title Kênh thông tin từ chúng tôi: 
+                        ul.footer__social-list
+                            each item in socials
+                                li
+                                    i(class=item)
+                .col-md-8
+                    .footer__form
+                        .row 
+                            .col-lg-3.col-md-12 
+                                h3.footer__form-title Đăng ký nhận 
+                                    span email từ chúng tôi
+                            .col-lg-8.offset-lg-1.col-md-12 
+                                form(action="#")
+                                    input(type="text")
+                                    button.button
+                                        i(class="fas fa-paper-plane")
+    .footer__main 
+        .container
+            .row
+                .col-lg-4
+                    +logo("logo__footer")
+                    .footer__desc Green shop được thành lập tù 8/2012 được sự tin tưởng cảu khách hàng trong suốt thời gian hoạt động đén nay cửa hàng ngày một phát triển
+                    p.footer__phone 
+                        i(class="fas fa-mobile-alt")
+                        span Điện thoại: (84-4) 66.455.666
+                    p.footer__email 
+                        i(class="far fa-envelope")
+                        span Email: ìno@dkt.com.vn
+                .col-lg-8
+                    .footer__main-content
+                        each contentItem,index in footer.content
+                            .footer__main-item
+                                h3.footer__main-title= contentItem.title 
+                                ul.footer__main-intro
+                                    each item in contentItem.list
+                                        li 
+                                            a(href="")= item
+    .footer__bottom
+        .container.d-flex.justify-content-between
+            ul.footer__bottom-content 
+                each item in footer.footerBottom.title
+                    li 
+                        a(href="#")= item 
+            ul.footer__bottom-payment 
+                each item in footer.footerBottom.icon
+                    a(href="#")
+                        i(class= item)   
+    .footer__design-by.text-center
+        p Thiết kế bởi Bizweb 
+            i(class="far fa-copyright")

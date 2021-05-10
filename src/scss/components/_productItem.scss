@@ -1,0 +1,152 @@
+.product {
+    &__item {
+        border: 1px $border-color solid;
+        margin-bottom: 3rem;
+        &:hover {
+            .product {
+                &__widget {
+                    top: 50%;
+                    @include respond-to("lg") {
+                        top: 60%;
+                    }
+                }
+            }
+        }
+    }
+
+    &__image {
+        position: relative;
+        overflow: hidden;
+        display: flex;
+    }
+
+    &__discount {
+        @include absolute(2rem, "", "", 3rem);
+        z-index: 1;
+        background-color: $light-red;
+        @include centerWidthHeight(4.5rem);
+        @include border-radius(50%);
+        font-size: 1.2rem;
+        color: $white;
+        &-green {
+            background-color: $green;
+        }
+    }
+
+    &__content {
+        text-align: center;
+        padding: 2rem;
+    }
+
+    &__name,
+    &__rate {
+        padding-bottom: 0.8rem;
+    }
+
+    &__name {
+        font-size: 1.6rem;
+        font-weight: 500;
+    }
+
+    &__rate {
+        color: $yellow;
+        i {
+            @include transition(all, 0.3s, ease-in);
+            &:hover {
+                @include transform-translate(y, -5px);
+            }
+        }
+    }
+
+    &__price {
+        &-current {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: $light-red;
+            padding-right: 1rem;
+        }
+        &-old {
+            text-decoration: line-through;
+            color: $dark-gray;
+        }
+    }
+
+    &__widget {
+        @include flex(center, center);
+        gap: 1rem;
+        width: 100%;
+        @include absolute(120%, "", "", 50%);
+        @include transform-translate(xy, -50%, -50%);
+        @include transition(top, 0.5s, ease-in-out);
+    }
+
+    &__icon {
+        background-color: $white;
+        color: $black;
+    }
+    &__horizontal {
+        @extend .product__item;
+        @include flex(flex-start, center, row);
+        max-height: 23rem;
+        background-color: $white;
+        &-small {
+            @extend .product__horizontal;
+            height: calc(100% / 6);
+            gap: 2rem;
+            padding: 1.5rem;
+            margin-bottom: 0;
+            &:not(:last-child) {
+                border-bottom: none;
+            }
+            h4,
+            i,
+            span {
+                font-size: 1.3rem;
+            }
+
+            .product {
+                &__price {
+                    padding: 0 !important;
+                }
+            }
+        }
+        .product {
+            &__item {
+            }
+            &__content {
+                text-align: left;
+                &-small {
+                    padding: 0;
+                }
+            }
+            &__name,
+            &__rate {
+                padding-bottom: 0.5rem;
+            }
+            &__image {
+                img {
+                    min-height: 7.5rem;
+                }
+            }
+            &__widget-horizontal {
+                @include flex-align-center;
+                gap: 1.5rem;
+            }
+            &__price {
+                padding: 1rem 0;
+                @include respond-to("lg") {
+                    padding: 0.5rem 0;
+                }
+            }
+            &__decs {
+                font-size: 1.2rem;
+                font-weight: 500;
+                color: $dark-gray;
+                padding-right: 4rem;
+                @include respond-to("lg") {
+                    display: none;
+                }
+            }
+        }
+    }
+}

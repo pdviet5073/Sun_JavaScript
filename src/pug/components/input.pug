@@ -1,0 +1,9 @@
+mixin input(label, type, name, typeTextarea)
+    div(class=`input__item ${type=='checkbox' ? 'input__item-checkbox': '' }`)
+        label(for=name)= label
+            i.fas.fa-star
+        .input
+            if(!typeTextarea)
+                input(type=type, name= name)
+            else 
+                textarea(name=name) 

@@ -1,0 +1,22 @@
+include input.pug
+- var image = './assets/images/popup.png'
+
+section.popup
+    .popup__container
+        .popup__img 
+            img(src=image, alt="anh-popup")
+        .popup__content 
+            .popup__title 
+                h1 Nhận tin tức từ chúng tôi 
+                h2 Đăng ký email ngay hôm nay 
+            .popup__input
+                form(action="#")
+                    input(type="text", placeholder='Nhập email của bạn vào đây')
+                    button.button
+                        i(class="fas fa-paper-plane")
+            .popup__desc 
+                p Đăng ký email ngay hôm nay để các thông tin về sự kiện và các chương trình giảm giá từ chúng tôi
+            +input('Không hiển thị lại thông báo này nữa', 'checkbox')
+        button.button.button__close 
+            label(for="popup")
+            

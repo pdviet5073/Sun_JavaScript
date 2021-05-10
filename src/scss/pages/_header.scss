@@ -1,0 +1,122 @@
+.header {
+    &__top {
+        @include centerWidthHeight(100%, 3rem);
+        background-color: $black;
+        color: $dark-gray;
+
+        @include respond-to("md") {
+            display: none;
+        }
+
+        &-icon {
+            display: inline-block;
+            height: 100%;
+            padding: 0 1rem;
+            @include border(1px, $dark-gray, 0, "left");
+
+            &:last-child {
+                @include border(1px, $dark-gray, 0, "right");
+            }
+
+            a {
+                padding-left: 0.8rem;
+            }
+        }
+    }
+    &_time {
+        padding-right: 1rem;
+
+        @include respond-to("lg") {
+            display: none;
+        }
+
+        i {
+            margin-right: 1rem;
+        }
+    }
+    &__social {
+        a {
+            color: $dark-gray;
+        }
+    }
+
+    &__main {
+        padding: 2rem 0;
+        @include respond-to("sm") {
+            padding: 1rem 0;
+        }
+    }
+
+    &__phone {
+        padding-bottom: 1rem;
+        @include respond-to("lg") {
+            display: none;
+        }
+        span {
+            padding-left: 1rem;
+        }
+    }
+
+    &__search {
+        padding-right: 2rem;
+        flex-grow: 1;
+
+        @include respond-to("md") {
+            display: none;
+        }
+
+        &-form {
+            background-color: $white;
+            @include border-radius(2.5rem);
+            overflow: hidden;
+
+            form {
+                width: 100%;
+                display: flex;
+            }
+            input {
+                outline: none !important;
+                border: none;
+                flex-grow: 1;
+                padding: 1rem 0 1rem 2.5rem;
+                @include respond-to("md") {
+                    padding: 0.7rem 0 1rem 2.5rem;
+                }
+            }
+            button {
+                padding: 0 1.5rem;
+            }
+        }
+    }
+    &__cart {
+        margin: auto 0;
+        @include transform-translate("y", 0, 75%);
+
+        @include respond-to("lg") {
+            @include transform-translate("y", 0, 0);
+        }
+        @include respond-to("md") {
+            display: none;
+            margin-left: 1rem;
+        }
+        i {
+            font-size: 1.8rem;
+        }
+        &-count {
+            padding-left: 1rem;
+            @include respond-to("lg") {
+                @include absolute(-50%, "", "", 70%);
+                padding: 0;
+                @include square(1.8rem, 50%);
+                background-color: $yellow;
+
+                text-align: center;
+            }
+            span {
+                @include respond-to("lg") {
+                    display: none;
+                }
+            }
+        }
+    }
+}

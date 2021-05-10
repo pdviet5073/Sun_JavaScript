@@ -1,0 +1,47 @@
+.input {
+    &__item {
+        label,
+        input {
+            color: $dark-gray;
+        }
+        padding: 1rem 0;
+        i {
+            font-size: 0.5rem;
+            color: red;
+            vertical-align: super;
+            padding-left: 2px;
+        }
+        .input {
+            display: flex;
+            margin-top: 0.5rem;
+            padding: 1rem;
+            border: 1px $border-color solid;
+            @include respond-to("sm") {
+                padding: 0.8rem;
+            }
+
+            input,
+            textarea {
+                flex: 1;
+            }
+            textarea {
+                min-height: 13rem;
+                @include respond-to("md") {
+                    min-height: 8rem;
+                }
+            }
+        }
+
+        &-checkbox {
+            @include flex(flex-end, center, row-reverse);
+            margin-left: 5px;
+            .input {
+                border: none;
+                margin-top: 0;
+            }
+            i {
+                display: none;
+            }
+        }
+    }
+}

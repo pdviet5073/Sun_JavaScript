@@ -1,0 +1,82 @@
+extends ../base/base.pug
+
+include ../components/productItem.pug
+include ../components/portfolio.pug
+include ../partials/mixin.pug
+
+block variables
+    //- insert from data.pug
+    - var productPortfolio = productPortfolio
+    - var sortPrice = sortPrice
+    - var sortColor = sortColor
+    - var product = products.newProducts
+    - var bannerImg = "../assets/images/products.png"
+
+mixin portfolioContainer 
+    section.portfolio
+        +portfolio("portfolio-product",productPortfolio, "Danh mục sản phẩm" )
+        +portfolio("portfolio-price",sortPrice, "Tìm kiếm theo giá" )
+        section.portfolio-color
+            +title("Tìm theo màu")
+            .portfolio-color__content
+                ul.portfolio-color__list 
+                    each item in sortColor
+                        li.portfolio-color__item
+                            a(href="#")
+                                span.portfolio-color__item-color(style=`background-color: ${item.hex }`)
+                                span.portfolio-color__item-text(onMouseOver=`this.style.color=${item.hex}`)= item.name 
+
+block content
+    .page__product
+        .container 
+            +page("Danh sách sản phẩm")
+            .row 
+                .col-lg-3.col-md-4.d-md-block.d-none
+                    +portfolioContainer
+                .col-lg-9.col-md-8.col-12
+                    section.products-banner 
+                        div.products-banner__img(style=`background-image: url(${bannerImg})`)
+                    section.products 
+                        .d-md-none.d-block.mt-5
+                            +portfolioContainer
+                        .products__top 
+                            .products__left 
+                                ul( class="nav ")
+                                    li
+                                        a( data-toggle="tab" href="#menu1") 
+                                            i(class="fas fa-th")
+                                    li
+                                        a( data-toggle="tab" href="#menu2") 
+                                            i(class="fas fa-th-list")
+                            .products__right
+                                .products__right-content
+                                    form.products__right-form(action="#")
+                                        .products__right-sort 
+                                            label.text-clamp.text-clamp--1(for="sort" ) Sắp xếp theo
+                                            .products__right-select
+                                                - var sort = ["Tên sản phẩm", "Giá","Màu sắc"]
+                                                    select(name="sort" value="Tên sản phẩm")
+                                                        each item in sort 
+                                                            option(value=item)= item 
+                                        .products__right-show
+                                            label.text-clamp.text-clamp--1(for="sort" ) Show
+                                            .products__right-select
+                                                - var show = [6, 9,12, 15]
+                                                select(name="show" value="Tên sản phẩm")
+                                                    each item in show 
+                                                        option(value=item)= item   
+                        .products__container
+                            
+                            .tab-content
+                                #menu1.tab-pane.in.active
+                                    .row
+                                        each item, index in product
+                                            if(index<12)
+                                                .col-lg-4.col-6.mx-auto
+                                                    +productVertical(item)
+                                #menu2.tab-pane.fade
+                                    each item, index in product
+                                        if(index<6)
+                                            +productHorizontal(item)
+                        include ../components/pagination.pug
+                                                 

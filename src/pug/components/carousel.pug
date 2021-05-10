@@ -1,0 +1,40 @@
+include ../components/productItem.pug
+
+mixin carousel(data)
+   div( id="carouselExampleIndicators", class="carousel slide", data-ride="carousel")
+        div(class="carousel-inner")
+            each item, index in data
+                div(class=`carousel-item ${index == 0 && "active"} `)
+                    img(class="d-block w-100" ,src=item ,alt="First slide")
+        a(class="carousel-control-prev", href="#carouselExampleIndicators" ,role="button" data-slide="prev")
+            span(class="carousel-control-prev-icon" ,aria-hidden="true")
+            span(class="sr-only") Previous
+        a(class="carousel-control-next", href="#carouselExampleIndicators", role="button" data-slide="next")
+            span(class="carousel-control-next-icon" ,aria-hidden="true")
+            span(class="sr-only") Next
+
+mixin carouselProduct(data, size, id, type)
+    div( id=id, class="carousel slide", data-ride="carousel")
+        div(class="carousel-inner")
+                - for(var i= 0; i< data.length; i+=size)
+                    - var carouselContent = data.slice(i, i+size)
+                        div(class=`carousel-item ${i == 0 && "active"} `)
+                            .row
+                                each item, index in carouselContent
+                                    if(!type)
+                                        div(class=` ${size==6 ? "col-xl-4 ": size==4 ?" col-lg-3 ": "col-xl-3 col-lg-4 " } col-md-6 col-12`)
+                                            +productVertical(item)
+                                    else
+                                        div(class=`col-12`)
+                                            +productHorizontal(item, "small")
+mixin carouselImage(data, size, id)
+    div( id=id, class="carousel slide", data-ride="carousel")
+        div(class="carousel-inner")
+                - for(var i= 0; i< data.length; i+=size)
+                    - var carouselContent = data.slice(i, i+size)
+                        if(carouselContent.length == size)
+                            div(class=`carousel-item carousel-image ${i == 0 && "active"} `)
+                                .row.mx-0
+                                    each item, index in carouselContent
+                                        div(class=` ${size==5 ? "carousel-image__item-row ":"col-md-2 col-12 pl-0  pb-1 pb-md-0  "}`)
+                                            img(src=`./assets/images/${item.src}.png`, alt="carousel-img", class="carousel-img ")

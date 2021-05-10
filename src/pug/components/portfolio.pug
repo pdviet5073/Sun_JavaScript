@@ -1,0 +1,10 @@
+include ../partials/mixin.pug
+
+mixin portfolio(name, data, title)
+    section.portfolio-product 
+        +title(title)
+        div(class= `${name}__content`)
+            ul(class=`${name}__list`)
+                each item in data
+                    li(class=`${name}__item`)
+                        a(href="#")= item 

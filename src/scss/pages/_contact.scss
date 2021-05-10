@@ -1,0 +1,25 @@
+.contact {
+    color: $dark-gray;
+    font-size: 1.3rem;
+    &__left {
+        padding-right: 1.5rem;
+        @include respond-to("md") {
+            padding-right: 0;
+        }
+    }
+    &__right {
+        padding-left: 1.5rem;
+        @include respond-to("md") {
+            padding-left: 0;
+        }
+    }
+    &__intro {
+        padding: 4rem 0 7rem 0;
+    }
+    &__title {
+        @extend .register__title;
+    }
+    &__desc {
+        padding: 2rem 0;
+    }
+}

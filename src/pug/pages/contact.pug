@@ -1,0 +1,40 @@
+extends ../base/base.pug
+
+include ../components/input.pug
+include ../components/logo.pug
+include ../partials/mixin.pug
+
+block variables
+
+block content
+    article.contact 
+            .contact__container
+                .container 
+                    +page('Đăng ký')
+                .contact__content
+                    section.contact__map 
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3833.7157431063397!2d108.21780491468428!3d16.080233988874145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3142183be28239a9%3A0x31b1ff8a6913b174!2zMTYgTMO9IFRoxrDhu51uZyBLaeG7h3QsIFRo4bqhY2ggVGhhbmcsIEjhuqNpIENow6J1LCDEkMOgIE7hurVuZyA1NTAwMDAsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1620289699685!5m2!1svi!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                section.contact__intro 
+                    .container
+                        .contact__title 
+                            h2.text-uppercase Thông tin tài khoản 
+                        form(action="#")
+                            .row 
+                                .col-md-6.pb-5 
+                                    .contact__left 
+                                        +input("Họ và tên", "text", "name")
+                                        +input('Địa chỉ email', 'email', 'email')
+                                        +input('Số ĐT', 'tel', 'phone') 
+                                        +input('Bình luận', 'text', 'comment', 'textarea')
+                                .col-md-6
+                                   .contact__right 
+                                        +logo
+                                        .contact__desc 
+                                            p DKT được thành lập vói niềm đam mê và khát vọng thành công trong lĩnh vực Thương mại điện tử. Chúng tôi đã và đang khẳng định lại vị trí hàng đầu bằng những sản phẩm
+                                        .contact__info 
+                                            p.footer__phone 
+                                                i(class="fas fa-mobile-alt")
+                                                span Điện thoại: (84-4) 66.455.666
+                                            p.footer__email 
+                                                i(class="far fa-envelope")
+                                                span Email: ìno@dkt.com.vn 

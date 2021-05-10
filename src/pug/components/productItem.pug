@@ -1,0 +1,64 @@
+mixin productHorizontal(data, size)
+    - var {src, name, discount, rate,currentPrice,oldPrice, desc} = data
+        div(class=`   ${size== "small" ? "product__horizontal-small" : "product__horizontal "}`)
+            .row
+                div(class=` ${size=="small" ? "col-5  ":"col-4 "}`) 
+                    .product__image.h-100
+                        img(src=`./assets/images/${src}.png`, alt="anh")
+                div(class=` ${size=="small" ? "col-6 p-0 ":"col-8 "} my-auto`) 
+                    div(class=`product__content ${size== "small" && "product__content-small"}`)
+                        .product__name 
+                            h4.text-clamp.text-clamp--1= name 
+                        .product__rate 
+                            if(Math.floor(rate) < 5)
+                                - for( var i=0; i< Math.floor(rate); i++)
+                                    i(class="fas fa-star")
+                                - for(var i=0; i<(5-Math.floor(rate)); i++)
+                                    if(i==0)
+                                        i(class="fas fa-star-half-alt")
+                                    else
+                                        i(class="far fa-star")
+                        if(!size)
+                            .product__decs 
+                                p.text-clamp.text-clamp--2= desc
+                        .product__price 
+                            span.product__price-current=  `${currentPrice} đ`
+                            if(oldPrice)
+                                span.product__price-old= `${oldPrice} đ`
+                        if (size !="small")
+                            .product__widget-horizontal  
+                                a.button.button-round.button-green  Mua ngay 
+                                .product__icon.icon.icon-round
+                                    i(class="fas fa-search")
+                                .product__icon.icon.icon-round
+                                    i(class="fas fa-heart")
+                        
+mixin productVertical({src, name, discount, rate,currentPrice,oldPrice, desc})
+    .product__item
+        if(discount)
+            div(class=`product__discount  ${discount=="New" &&  "product__discount-green"}`)= discount
+        .product__image 
+            img(src=`./assets/images/${src}.png`, alt="anh")
+            .product__widget  
+                a.button.button-round.button-green(href="productDetail.html")  Mua ngay 
+                .product__icon.icon.icon-round
+                    i(class="fas fa-search")
+        .product__content
+            .product__name 
+                h4.text-clamp.text-clamp--1= name 
+            .product__rate 
+                if(Math.floor(rate) < 5)
+                    - for( var i=0; i< Math.floor(rate); i++)
+                        i(class="fas fa-star")
+                    - for(var i=0; i<(5-Math.floor(rate)); i++)
+                        if(i==0)
+                            i(class="fas fa-star-half-alt")
+                        else
+                            i(class="far fa-star")
+                else 
+                    - for( var i=0; i< Math.floor(rate); i++)
+                        i(class="fas fa-star")
+            .product__price 
+                span.product__price-current=  `${currentPrice} đ`
+                if(oldPrice)
+                    span.product__price-old= `${oldPrice} đ`

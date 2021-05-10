@@ -1,0 +1,58 @@
+extends ../base/base.pug
+
+include ../partials/mixin.pug
+
+block variables
+    - var cartData = cart 
+    - var {title, products} = cartData
+
+block content
+    section.cart 
+        .container 
+            +page("Giỏ hàng")
+            .cart__container 
+                h2.cart__title-main Giỏ hàng
+                .cart__content 
+                    form(action="#")
+                        .cart__table 
+                            table.table.table-bordered
+                                thead
+                                    tr
+                                        each item in title 
+                                            th(scope='col')= item
+                                tbody
+                                    each productItem in products
+                                        tr
+                                            td 
+                                                img(src=`./assets/images/${productItem.src}.png`, alt="cart-img")
+                                            td.cart__name= productItem.name
+                                            td= `${productItem.currentPrice} `
+                                                span.d-md-inline.d-none đ
+                                            td 
+                                                div.cart__amount
+                                                    input(type="number" , value= productItem.amount, min="1" ,max="10")
+                                            td= `${productItem.total} `
+                                                span.d-md-inline.d-none đ
+                                            td
+                                                button.button 
+                                                    i.fas.fa-trash-alt               
+                            .cart__btn.text-right.my-5
+                                button(type='button').button.button-round--lg.button-white.mr-4 Huỷ đơn hàng
+                                button(type='button').button.button-round--lg.button-green   Tiếp tục mua
+                        .cart__total.pt-5
+                            .row 
+                                .col-lg-7.offset-lg-5.col-md-8.offset-md-4.col-12
+                                    table.table.table-bordered
+                                        tfoot 
+                                            tr
+                                                td(scope='col') Tổng phải thanh toán 
+                                                td(scope='col') 297.000 đ
+                                        tbody
+                                                tr
+                                                    td Tổng tiền (Chưa thuế)
+                                                    td 270.000 đ
+                                                tr
+                                                    td Thuế (VAT 10%)
+                                                    td 27.000 đ
+                            .cart__btn.text-right.my-4
+                                button(type='button').button.button-round--lg.button-green  Thanh toán

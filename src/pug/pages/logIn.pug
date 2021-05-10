@@ -1,0 +1,32 @@
+extends ../base/base.pug
+
+include ../components/input.pug
+
+block variables
+
+block content
+    article.logIn 
+        .container 
+            .logIn__container 
+                +page('Đăng nhập')
+                .logIn__content
+                    form(action="#")
+                        .row 
+                            .col-lg-6.pb-4 
+                                .logIn__title 
+                                    h2.text-uppercase Thông tin cá nhân
+                                .logIn__form 
+                                    +input("Họ và tên", "text", "name")
+                                    +input('Số ĐT', 'tel', 'phone')
+                                    .logIn__check.d-flex.align-items-center
+                                        +input("Ghi nhớ tài khoản", 'checkbox', 'checkbox')
+                                        a.pl-5(href="#") Bạn quên mật khẩu?
+                                    .logIn__btn.pt-3
+                                        button.button.button-round--lg.button-green Đăng nhập
+                            .col-lg-6
+                                .logIn__title 
+                                    h2.text-uppercase Bạn chưa có tài khoản 
+                                .logIn__desc
+                                    p Đăng ký tài khoản ngay để có thể mua hàng nhanh chóng và dễ dàng hơn! Ngoài ra còn có rất nhiều chính sách và ưu đãi cho các thành viên citybike
+                                .logIn__btn.pt-5 
+                                    button.button.button-round--lg.button-green Đăng ký

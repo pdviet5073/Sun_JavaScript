@@ -1,0 +1,88 @@
+extends news.pug 
+
+block variables
+    //- insert from data.pug
+    - var productPortfolio = productPortfolio
+    - var hotNewsData = hotNews
+    - var blogTagData = blogTag
+    - var newsData = news.pageNews
+    - var commentData = comments
+    - var reCommentData = reComment
+    - var immData = "./assets/images/new-4.png"
+
+mixin commentItem({commentId,avatar, author, status, createAt})
+    div(class=`comment__item ${commentId ? "comment__item-reComment": ""}`)
+        .row
+            .col-2.pr-0 
+                .comment__avatar
+                    img(src=avatar, alt="avatar-comment")
+            .col-10
+                .comment__item-content
+                    .comment__author
+                        h3= author 
+                        button.button Trả lời 
+                    .comment__status
+                        p= status
+                    .comment__createAt
+                        p= createAt
+
+mixin input(label,typeInput, type )
+    
+    .input__comment
+        span= label
+        if(!type)
+            input(type=typeInput)
+        else 
+            textarea
+
+block contentNews 
+    article.detail-news
+        section.detail-new__content 
+            .container 
+                +pageNewsItem(newsData[0])
+                .detail-news__desc 
+                    p  Như thể hiện sự thân thiệ cũng như sự hiếu khách của gia chủ, phần không gian trước cửa nhà luôn được đầu tư và trang trí khá bắt mắt.
+                    p Cũng có thể nói đây là bộ mặt của ngôi nhà, là ấn tượng đầu tiên khi một vị khách ghé chơi nhà bạn đấy. Hãy cùng Sài Gòn Hoa tham khảo một vài cách bố trí chậu cây hoa cảnh ngay trước của nhà sao cho ấn tượng nhất nhé 
+                    p Như thể hiện sự thân thiệ cũng như sự hiếu khách của gia chủ, phần không gian trước cửa nhà luôn được đầu tư và trang trí khá bắt mắt.
+                    p Như thể hiện sự thân thiệ cũng như sự hiếu khách của gia chủ, phần không gian trước cửa nhà luôn được đầu tư và trang trí khá bắt mắt.
+                .detail-news__img 
+                    img(src=immData, alt="anh-detail-news") 
+                .detail-news__desc 
+                    p  Như thể hiện sự thân thiệ cũng như sự hiếu khách của gia chủ, phần không gian trước cửa nhà luôn được đầu tư và trang trí khá bắt mắt.
+                    p Cũng có thể nói đây là bộ mặt của ngôi nhà, là ấn tượng đầu tiên khi một vị khách ghé chơi nhà bạn đấy. Hãy cùng Sài Gòn Hoa tham khảo một vài cách bố trí chậu cây hoa cảnh ngay trước của nhà sao cho ấn tượng nhất nhé 
+        section.comment 
+            .container 
+                .comment__title.mt-5.pt-5
+                    - var count = commentData.length + reCommentData.length 
+                    h2.text-uppercase Bình luận 
+                        | (#{count})
+                .comment__container 
+                    each item in commentData
+                        - var reComment = reCommentData.filter(itemReComment => itemReComment.commentId == item.id)
+                            if (reComment)
+                                .comment__list
+                                    +commentItem(item)
+                                    .offset-2
+                                        each reCommentItem in reComment
+                                            +commentItem(reCommentItem)
+                            else
+                                .comment__list
+                                    +commentItem(item)
+        section.create-comment 
+            .container 
+                .create-comment__container
+                    form
+                        .row 
+                            .col-lg-4.mt-4
+                                +input('Họ và tên:', "text") 
+                            .col-lg-4.col-sm-6.mt-4
+                                +input('Email:','email') 
+                            .col-lg-4.col-sm-6.mt-4
+                                +input('Phone:', 'tel') 
+                            .col-12.mt-4
+                                +input('Bình luận', "","textarea")
+                            .col-12.mt-4.text-right
+                                button.button.button-round--lg.button-green Gửi
+
+        .d-md-none.d-block
+            +portfolioItem

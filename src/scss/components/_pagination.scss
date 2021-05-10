@@ -1,0 +1,39 @@
+.pagination {
+    @include respond-to("md") {
+        margin-bottom: 6rem;
+    }
+    &__container,
+    form {
+        width: 100%;
+    }
+    &__content {
+        @include flex(flex-end);
+        gap: 1rem;
+
+        @include respond-to("lg") {
+            justify-content: center;
+        }
+    }
+    &__item {
+        background-color: $white;
+        border: 1px $border-color solid;
+        &-active {
+            background-color: $dark-green;
+            .pagination__button {
+                color: $white;
+            }
+        }
+    }
+    &__button {
+        padding: 0 1.5rem;
+        min-width: 4rem;
+        min-height: 4rem;
+        color: $dark-gray;
+
+        @include respond-to("md") {
+            padding: 0 1rem;
+            min-width: 3rem;
+            min-height: 3rem;
+        }
+    }
+}

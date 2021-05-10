@@ -1,0 +1,155 @@
+.footer {
+    background-color: $light-black;
+    color: $dark-gray;
+
+    h3 {
+        padding-bottom: 1rem;
+        font-size: 1.5rem;
+        font-weight: 600;
+        text-transform: uppercase;
+
+        @include respond-to("md") {
+            color: $green;
+        }
+    }
+    &__top {
+        padding: 3rem 0;
+    }
+    &__social {
+        &-list {
+            @include flex-align-center;
+            gap: 2.5rem;
+            font-size: 1.8rem;
+            @include respond-to("md") {
+                color: $white;
+            }
+        }
+        @include respond-to("md") {
+            padding-bottom: 1.5rem;
+        }
+    }
+    &__form {
+        form {
+            @include flex-align-center;
+            background-color: $white;
+        }
+        input {
+            flex-grow: 1;
+            padding: 1rem 2rem;
+            color: $dark-gray;
+        }
+        button {
+            padding: 1rem 1.5rem;
+            background-color: $green;
+            color: $white;
+        }
+    }
+    &__main {
+        padding: 3.5rem 0;
+        border-top: 1px $dark-gray solid;
+        border-bottom: 1px $dark-gray solid;
+        @include respond-to("md") {
+            border-bottom: none;
+        }
+
+        &-content {
+            @include flex;
+            gap: 1rem;
+            @include respond-to("lg") {
+                padding-top: 3rem;
+            }
+            @include respond-to("md") {
+                padding-top: 2rem;
+            }
+        }
+        &-item {
+            padding-top: 2rem;
+
+            @include respond-to("xl") {
+                width: calc(50% - 3rem);
+                padding-left: 3rem;
+            }
+
+            @include respond-to("lg") {
+                width: calc(50% - 3rem);
+                padding-left: 0;
+            }
+            @include respond-to("sm") {
+                width: 100%;
+            }
+        }
+        &-title {
+            color: $green;
+        }
+        &-intro {
+            font-size: 1.3rem;
+
+            li {
+                padding: 1rem 0 1rem 1.5rem;
+                position: relative;
+                @include transition(padding, 0.4s, ease-in-out);
+                &:hover {
+                    color: $green;
+                    padding: 1rem 0 1rem 2rem;
+                }
+
+                &::before {
+                    content: ">";
+                    @include absolute(25%, "", "", 0);
+                }
+
+                @include respond-to("md") {
+                    padding: 0.6rem 0 0.6rem 1rem;
+                    &:hover {
+                        color: $green;
+                        padding: 0.6rem 0 0.6rem 2rem;
+                    }
+                    &::before {
+                        @include absolute(20%, "", "", 0);
+                    }
+                }
+            }
+        }
+    }
+
+    &__desc,
+    &__phone {
+        padding: 1.5rem 2rem 1.5rem 0;
+    }
+    &__email,
+    &__phone {
+        i {
+            padding-right: 1rem;
+            color: $green;
+        }
+    }
+    &__bottom {
+        padding: 2rem 0;
+        @include respond-to("md") {
+            display: none;
+        }
+        &-content {
+            font-size: 1.3rem;
+            @include flex-align-center;
+            gap: 2rem;
+            @include respond-to("lg") {
+                gap: 1.4rem;
+            }
+        }
+        &-payment {
+            i {
+                padding-left: 1rem;
+                font-size: 1.9rem;
+            }
+        }
+    }
+    &__design-by {
+        padding: 1rem;
+        color: $white;
+        background-color: #434343;
+        text-align: center;
+    }
+}
+.logo__footer {
+    margin: unset;
+}

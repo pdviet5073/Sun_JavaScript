@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@400;500;600;700&display=swap");
+
+#popup {
+    display: none;
+}
+input:checked + .popup {
+    transform: scale3d(1, 1, 1);
+    opacity: 1;
+    visibility: visible;
+}
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    color: #636363;
+    opacity: 0;
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.2);
+    @include transition(all, 0.4s, ease-in-out);
+    transform: scale3d(0, 0, 1);
+    transform-origin: 50%;
+    @include respond-to("md") {
+        display: none;
+    }
+    &__container {
+        width: 55%;
+        overflow: hidden;
+
+        @include flex-align-center;
+        position: relative;
+        top: 25%;
+        left: 50%;
+        z-index: 100;
+
+        @include transform-translate(x, -50%);
+        padding: 5rem 2rem;
+        background-color: #f7f1f1;
+        @include respond-to("xl") {
+            width: 65%;
+        }
+        @include respond-to("lg") {
+            width: 75%;
+        }
+    }
+    &__img {
+        width: 80%;
+        padding-right: 1rem;
+    }
+    &__title {
+        padding-bottom: 2rem;
+        h1 {
+            // font-family: "Josefin Slab", serif;
+            font-size: 2.8rem;
+            @include respond-to("xl") {
+                font-size: 2.4rem;
+            }
+            @include respond-to("lg") {
+                font-size: 2rem;
+            }
+        }
+        h2 {
+            padding-top: 0.5rem;
+            font-size: 2.3rem;
+            font-weight: 600;
+            color: $green;
+            text-transform: uppercase;
+            @include respond-to("xl") {
+                font-size: 2rem;
+            }
+            @include respond-to("lg") {
+                font-size: 1.8rem;
+            }
+        }
+    }
+    &__input {
+        @extend .footer__form;
+    }
+    &__desc {
+        padding: 1.5rem 0 1.5rem 0;
+        @include respond-to("lg") {
+            font-size: 1.3rem;
+        }
+    }
+    .input__item-checkbox {
+        margin-left: 0;
+
+        .input {
+            padding-left: 0;
+        }
+    }
+}
+.button__close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2.2rem;
+    z-index: 100;
+
+    label {
+        position: relative;
+        width: 4rem;
+        height: 4rem;
+        cursor: pointer;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -25%;
+            width: 2.5rem;
+            height: 1.5px;
+            background-color: $dark-green;
+            transform: rotate(45deg) translate(100%);
+            -webkit-transform: rotate(45deg) translate(100%);
+            -moz-transform: rotate(45deg) translate(100%);
+            -ms-transform: rotate(45deg) translate(100%);
+            -o-transform: rotate(45deg) translate(100%);
+        }
+        &::after {
+            @extend label::before;
+            left: 17%;
+            top: 45%;
+            transform: rotate(135deg) translate(0);
+            -webkit-transform: rotate(135deg) translate(0);
+            -moz-transform: rotate(135deg) translate(0);
+            -ms-transform: rotate(135deg) translate(0);
+            -o-transform: rotate(135deg) translate(0);
+        }
+    }
+}

@@ -1,0 +1,97 @@
+extends ../base/base.pug
+
+include ../partials/mixin.pug
+include ../components/carousel.pug
+
+block variables 
+    - var productDetail = productDetail
+    -var suggestionsData = products.newProducts
+    - var {src,slideImages,name, rate, currentPrice, oldPrice, desc, info} = productDetail
+    - var {commonName, scienceName, plantFamily,height, roots, desc} = info
+
+mixin productName
+    .product__name.pr-2
+        h2.text-clamp.text-clamp--1= name 
+    .product__rate 
+        - for( var i=0; i< Math.floor(rate); i++)
+            i(class="fas fa-star")
+        - for(var i=0; i<(5-Math.floor(rate)); i++)
+            if(i==0 && (rate - Math.floor(rate)))
+                i(class="fas fa-star-half-alt")
+            else
+                i(class="far fa-star")
+
+block content 
+    .product-detail 
+        .container 
+            +page("Cây dạ lam")
+            .product-detail__container 
+                .product-detail__content
+                    .d-md-none.d-flex.pb-4.align-items-center
+                        +productName
+                    .row 
+                        .col-md-5.col-12
+                            .row.flex-row-reverse 
+                                .col-md-12.col-9
+                                        .product-detail__image-thumbnail
+                                            img(src=`${src}`, alt="product-detail")
+                                .col-md-12.col-3
+                                    .product-detail__image-slide.d-md-block.d-none.mt-lg-4.mt-md-3
+                                        +carouselImage(slideImages, 5, "carousel-image")
+                                    .product-detail__image-slide.d-md-none.d-block.mt-lg-4.mt-md-3
+                                        +carouselImage(slideImages, 4, "carousel-image")
+                        .col-md-7.col-12
+                            .product-detail__left
+                                form(action="#")
+                                    div(class=`text-left`)
+                                        .d-md-block.d-none
+                                            +productName
+                                        .product__price.pb-4
+                                            span.d-md-none.d-block.pr-4 Giá:   
+                                            span.product__price-current=  `${currentPrice} đ`
+                                            if(oldPrice)
+                                                span.product__price-old= `${oldPrice} đ` 
+                                        .product__decs.product-detail__desc
+                                            p.text-clamp.text-clamp--3= desc 
+                                        .product-detail__amount
+                                            .product-detail__amount-title Số lượng
+                                            .product-detail__amount-decrease -
+                                            .product-detail__amount-number 1
+                                            .product-detail__amount-increase +
+                                        .product-detail__button 
+                                            button.button.button-round.button-green  Mua ngay 
+                                            .product__icon.icon.icon-round
+                                                i(class="fas fa-search")
+                                            .product__icon.icon.icon-round
+                                                i(class="fas fa-heart")
+                                        .product-detail__social 
+                                            img(src="./assets/images/link.png", alt="social")
+                .product-detail__info
+                    ul( class="nav  product-detail__info-nav")
+                        li
+                            a( data-toggle="tab" href="#menu1" class="active show ") Thông tin khách hàng
+                        li
+                            a( data-toggle="tab" href="#menu2" ) Khách hàng đánh giá
+                        li
+                            a( data-toggle="tab" href="#menu3" ) Thẻ tag
+                    .tab-content
+                        #menu1.tab-pane.in.active 
+                            .product-detail__info-content 
+                                p 
+                                    span.pr-2 Tên phổ thông:    
+                                    span=  commonName
+                                p 
+                                    span.pr-2 Tên khoa học:
+                                    span=  scienceName
+                                p 
+                                    span.pr-2 Họ thực vật:
+                                    span=  plantFamily
+                                p 
+                                    span.pr-2 Chiều cao:
+                                    span=  roots
+                                p=  roots
+                                p= desc
+                        #menu2.tab-pane.fade ...
+                        #menu3.tab-pane.fade ...
+                .product-detail__suggestions
+                    +titleAndCarousel("product-detail__suggestions", "Sản phẩm cùng loại", "product-detail__suggestions",suggestionsData, 4)

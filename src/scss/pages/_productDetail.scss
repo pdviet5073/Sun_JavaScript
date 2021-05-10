@@ -1,0 +1,142 @@
+.product-detail {
+    &__image {
+        &-thumbnail {
+            @include respond-to("md") {
+                margin: 0 0 0 -15px;
+            }
+        }
+        &-slide {
+            @include respond-to("md") {
+                margin: 0 -15px 0 0;
+            }
+        }
+        &-thumbnail {
+            height: 100%;
+            display: flex;
+        }
+        &-slide {
+            .carousel-img {
+                @include respond-to("md") {
+                }
+            }
+        }
+    }
+    &__left {
+        padding: 1rem 0;
+    }
+    &__desc {
+        padding: 2rem 0;
+        border-top: 1px solid $border-color;
+        border-bottom: 1px solid $border-color;
+        font-size: 1.3rem;
+        color: $dark-gray;
+    }
+    &__amount {
+        @include flex-align-center;
+        gap: 1rem;
+        padding: 2rem 0;
+        border-bottom: 1px solid $border-color;
+
+        &-title {
+            padding-right: 2rem;
+        }
+        &-decrease,
+        &-increase,
+        &-number {
+            @include centerWidthHeight(3.5rem);
+            border: 1px $border-color solid;
+        }
+        &-decrease,
+        &-increase {
+            cursor: pointer;
+        }
+        &-number {
+            @include centerWidthHeight(7rem, 3.5rem);
+        }
+    }
+    &__button {
+        @include flex-align-center;
+        gap: 1rem;
+        padding: 2rem 0;
+    }
+
+    &__info {
+        padding: 7rem 0;
+
+        &-nav {
+            @include flex-align-center;
+            flex-wrap: nowrap;
+            li {
+                padding-bottom: 1rem;
+                a {
+                    padding: 1rem 7rem;
+                    font-size: 1.5rem;
+                    text-transform: uppercase;
+                    @include respond-to("lg") {
+                        padding: 1rem 2rem;
+                        font-size: 1.6rem;
+                    }
+                    @include respond-to("md") {
+                        padding: 1rem;
+                        font-size: 1.4rem;
+                    }
+                }
+                a.active.show {
+                    position: relative;
+                    color: $green;
+                    border: 1px $border-color solid;
+
+                    &::before {
+                        content: "";
+                        @include absolute(0, "", "", 0);
+                        @include width-height(100%, 2px);
+                        background-color: $light-black;
+                    }
+
+                    &::after {
+                        content: "";
+                        @include absolute("", "", 0, 0);
+                        @include width-height(100%, 1rem);
+                        @include transform-translate(y, "", 50%);
+                        background-color: $white;
+                    }
+                }
+            }
+        }
+        .tab-content {
+            border: 1px $border-color solid;
+            padding: 2rem;
+
+            p {
+                padding: 0.7rem 0;
+                color: $dark-gray;
+                @include respond-to("md") {
+                    font-size: 1.3rem;
+                }
+            }
+        }
+    }
+
+    &__suggestions {
+        padding-bottom: 4rem;
+    }
+
+    .product {
+        &__rate {
+            font-size: 1.2rem;
+        }
+        &__name {
+            font-size: 1.7rem;
+
+            @include respond-to("md") {
+                font-size: 2.1rem;
+            }
+        }
+        &__price {
+            @include respond-to("md") {
+                @include flex-align-center;
+                padding-top: 3rem;
+            }
+        }
+    }
+}

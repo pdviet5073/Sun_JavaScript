@@ -1,0 +1,74 @@
+extends ../base/base.pug
+
+include ../components/carousel.pug
+include ../components/productItem.pug
+include ../partials/mixin.pug
+
+block variables
+    - var [item1,item2,item3,item4,item5,item6] = products.hotProducts
+    - var popularProducts = products.popularProducts
+    - var newProducts = products.newProducts
+    - var imgBanner = "./assets/images/banner.png"
+    - var newsHome= news.home
+
+
+block content
+    section.carousel
+        +carousel(carousel)
+    section.hot-product 
+        .container 
+            .hot-product__container 
+                +title("Sản phẩm nổi bật")
+                .hot-product__list 
+                        .row
+                            .col-lg-6.col-12
+                                .hot-product__left
+                                    .row
+                                        .col-12 
+                                            +productVertical(item1)
+                                        .col-6
+                                            +productVertical(item4)
+                                        .col-6
+                                            +productVertical(item5)
+                            .col-lg-6.col-12
+                                .hot-product__right
+                                    .row
+                                        .col-6
+                                            +productVertical(item2)
+                                        .col-6
+                                            +productVertical(item3)
+                                        .col-12
+                                            +productVertical(item6)
+    .product__sale-buy 
+        .container 
+            .row 
+                .col-xl-3.col-md-4 
+                    section.popular-product
+                        .popular-product.d-md-block.d-none 
+                            +title("Sản phẩm mua nhiều")
+                            .popular-product__list 
+                                each item in popularProducts
+                                    +productHorizontal(item, "small")
+                        .popular-product.d-md-none.d-block 
+                            +titleAndCarousel("popular-product", "Sản phẩm khuyến mãi","popularProducts", popularProducts,3,"horizontal" )
+                            
+                .col-xl-9.col-md-8 
+                    section.sale-product 
+                        +titleAndCarousel("popular-product", "Sản phẩm khuyến mãi","sale-product ",newProducts,6 )
+    section.banner 
+        .container 
+            .banner__content(style=`background-image: url(${imgBanner})`) 
+    section.new-product 
+        .container 
+            +titleAndCarousel("popular-product", "Sản phẩm khuyến mãi","new-product",newProducts,8 )
+    section.news.d-lg-block.d-none 
+        .container 
+            +title("Tin tức")
+            .news__container
+                .row 
+                    each item in newsHome 
+                        .col-md-4
+                            +newsItem(item)
+
+    input(type="checkbox" checked id="popup")
+    include ../components/popup.pug

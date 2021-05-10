@@ -1,0 +1,58 @@
+mixin nav-item(menuItem, type= "")
+    li(class=`nav__item ${type}`)
+        a(class="button__link text-uppercase", href=menuItem.link)= menuItem.title
+        if(menuItem.dropdown)
+            i( class="fa fa-angle-down nav__item-icon" )
+            ul.dropdown 
+                if(menuItem.title =="Sản phẩm")
+                    each item in productPortfolio
+                        li.col-10.dropdown__item= item
+                else 
+                    each item in blogTag
+                        li.col-10.dropdown__item= item 
+.header__nav
+        nav.nav.position-relative
+            input(type="checkbox" id="toggle__nav")
+            div(id="collapse1")
+                ul.toggle__nav-list
+                    each menuItem in menu 
+                        +nav-item(menuItem, "nav__respond-item")
+                    button.button.button__close 
+                        label(for="toggle__nav")
+                label.close__nav(for="toggle__nav")
+            .container
+                ul.nav__list 
+                    each menuItem in menu 
+                        li(class=`nav__item nav__item-respond `)
+                            a(class="button__link text-uppercase", href=menuItem.link)= menuItem.title
+                            if(menuItem.dropdown)
+                                i( class="fa fa-angle-down nav__item-icon" )
+                                ul.dropdown
+                                    .row.m-4
+                                        if(menuItem.title =="Sản phẩm")
+                                            .col-md-6.col-12
+                                                each item in productPortfolio
+                                                    li.col-12.dropdown__item= item 
+                                            img.col-6.dropdown__image(src="./assets/images/new-4.png", alt="")
+                                        else 
+                                            each item in blogTag
+                                                li.col-6.dropdown__item= item 
+                ul.nav__respond
+                    .row
+                        .col-sm-1.col-2.d-flex
+                            button.button
+                                label(for="toggle__nav")
+                                    i(class="fas fa-bars icon-hamburger") 
+                        .col-sm-8.col-10.offset-sm-3
+                            .header__search.header__search-respond
+                                .header__search-form
+                                    form(action="#")
+                                        input(type="text", placeholder=" Tìm kiếm..." ,class="header__search-input")
+                                        button.button.header__search-button
+                                            i(class="fas fa-search")
+                                .header__cart.header__cart-respond
+                                    button.button 
+                                        a(href="cart.html")
+                                            i(class="fas fa-shopping-cart")
+                                            span.header__cart-count 0 
+                                                span Sản phẩm 

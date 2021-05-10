@@ -1,0 +1,27 @@
+.carousel-control-prev-icon {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+}
+.carousel-item {
+    img {
+        min-height: 23rem;
+    }
+}
+
+.carousel-image {
+    img {
+        min-height: unset;
+        @include respond-to("lg") {
+            // height: 50rem;
+        }
+    }
+    .row {
+        gap: 1rem;
+    }
+    &__item {
+        &-row {
+            width: calc(100% / 5 - 4rem / 5);
+        }
+    }
+}

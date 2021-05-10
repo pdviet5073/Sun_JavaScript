@@ -1,0 +1,62 @@
+//- Header
+mixin icon(classItem)
+    a(class="header__social-item header__top-icon", href="#")
+        i(class=`${classItem}`)
+
+//- Footer
+mixin footer-item(col)
+    div(class=col)
+        h3.footer__main-title= contentItem.title 
+        ul.footer__main-list
+            each item in contentItem.list
+                li= item
+
+//- home
+mixin title(title)
+    .product__title  
+        h2= title
+        
+mixin titleSecond(title, idCarousel)
+    .product__title.product__title-second 
+        h2= title
+        .product__title-icon
+            .product__icon.icon.icon-round-sm(href=idCarousel ,role="button" data-slide="prev")
+                i(class="fas fa-chevron-left")
+            .product__icon.icon.icon-round-sm(href=idCarousel ,role="button" data-slide="next")
+                i(class="fas fa-chevron-right")
+
+mixin titleAndCarousel(name, title, id, data, size, type)
+    .d-md-block.d-none
+        if(type)
+            +title(title)
+        else 
+            +titleSecond(title, `#${id}`)
+    .d-md-none.d-block
+        +titleSecond(title,  `#${id}-md`)
+    div(class= `${name}__list`)
+        .d-md-block.d-none
+            +carouselProduct(data, size,id )
+        .d-md-none.d-block
+            if(type)
+                +carouselProduct(data, size, `${id}-md`, "small")
+            else    
+                +carouselProduct(data, 1, `${id}-md`)
+
+mixin newsItem({src,date,title,content})
+    .news__item 
+        .news__img(style=`background-image: url("./assets/images/${src}")`)
+        .news__content 
+            .news__date
+                p= date
+            .news__title
+                h3= title
+            .news__desc
+                p= content 
+            .news__more
+                a(href="#") Đọc tiếp 
+
+//-
+mixin page(name)
+   .name-page
+        h4 Home / 
+            span=  name 

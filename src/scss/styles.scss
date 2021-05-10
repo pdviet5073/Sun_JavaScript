@@ -1,0 +1,24 @@
+@import "utilities/reset";
+@import "utilities/variables";
+@import "utilities/mixin";
+@import "utilities/global";
+
+@import "components/carousel";
+@import "components/navigation";
+@import "components/productItem";
+@import "components/pagination";
+@import "components/input";
+@import "components/logo";
+@import "components/popup";
+
+@import "pages/header";
+@import "pages/footer";
+@import "pages/home";
+@import "pages/products";
+@import "pages/productDetail";
+@import "pages/cart";
+@import "pages/news";
+@import "pages/detailNews";
+@import "pages/register";
+@import "pages/logIn";
+@import "pages/contact";
