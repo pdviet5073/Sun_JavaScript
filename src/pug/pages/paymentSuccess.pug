@@ -1,0 +1,20 @@
+extends ../base/base.pug
+
+
+
+block content 
+    .success 
+        .success__container
+            .check-container.mx-auto
+                .check-background
+                    svg(viewbox='0 0 65 51', fill='none', xmlns='http://www.w3.org/2000/svg')
+                        path(d='M7 25L27.3077 44L58.5 7', stroke='white', stroke-width='13', stroke-linecap='round', stroke-linejoin='round')
+                .check-shadow
+            h2 Đặt hàng thành công
+            p Đơn hàng của bạn đang được xử lý. Cảm ơn bạn đã tin dùng sản phẩm của chúng tôi
+            p Bấm 
+                a(href="index.html") vào đây 
+                | để quay lại trang chủ
+
+block script 
+    script(src="./js/paymentSuccess.js") 

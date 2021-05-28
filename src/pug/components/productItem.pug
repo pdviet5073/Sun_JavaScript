@@ -1,6 +1,6 @@
 mixin productHorizontal(data, size)
     - var {src, name, discount, rate,currentPrice,oldPrice, desc} = data
-        div(class=`   ${size== "small" ? "product__horizontal-small" : "product__horizontal "}`)
+        div(class=`${size== "small" ? "product__horizontal-small" : "product__horizontal "}`)
             .row
                 div(class=` ${size=="small" ? "col-5  ":"col-4 "}`) 
                     .product__image.h-100
@@ -55,10 +55,7 @@ mixin productVertical({src, name, discount, rate,currentPrice,oldPrice, desc})
                             i(class="fas fa-star-half-alt")
                         else
                             i(class="far fa-star")
-                else 
-                    - for( var i=0; i< Math.floor(rate); i++)
-                        i(class="fas fa-star")
             .product__price 
-                span.product__price-current=  `${currentPrice} đ`
+                span.product__price-current=  `${currentPrice.toLocaleString()} đ`
                 if(oldPrice)
-                    span.product__price-old= `${oldPrice} đ`
+                    span.product__price-old= `${oldPrice.toLocaleString()} đ`

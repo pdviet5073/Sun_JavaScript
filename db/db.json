@@ -1,0 +1,576 @@
+{
+  "typeProducts": [
+    {
+      "id": 1,
+      "title": "Cây chậu treo ( 10 )"
+    },
+    {
+      "id": 2,
+      "title": "Cây có hoa ( 5 )"
+    },
+    {
+      "id": 3,
+      "title": "Cây dây leo"
+    },
+    {
+      "id": 4,
+      "title": "Cây để bàn"
+    },
+    {
+      "id": 5,
+      "title": "Cây may mắn"
+    },
+    {
+      "id": 6,
+      "title": "Cây trang trí"
+    },
+    {
+      "id": 7,
+      "title": "Cây nội thất"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "typeProduct": 1,
+      "discount": "New",
+      "src": "spx2-1",
+      "nameProduct": "Cây chân chim",
+      "rate": 4.5,
+      "currentPrice": 150000,
+      "oldPrice": 250000,
+      "descThumbnail": "Cây Ngọc Ngân là loại cây dành cho tình yêu! Đây là món quà bất ngờ để bạn tặng \"Người ấy\". Ngọc Ngân (Valentiane) không chỉ đẹp ở phiến lá xanh đốm trắng.",
+      "slideImages": [
+        {
+          "src": "spx2-1"
+        },
+        {
+          "src": "spx2-2"
+        },
+        {
+          "src": "spx2-3"
+        },
+        {
+          "src": "spx2-4"
+        },
+        {
+          "src": "spx2-5"
+        },
+        {
+          "src": "spx2-6"
+        },
+        {
+          "src": "spx2-7"
+        },
+        {
+          "src": "spx2-8"
+        },
+        {
+          "src": "spx2-9"
+        },
+        {
+          "src": "spx2-10"
+        }
+      ],
+      "info": {
+        "commonName": "Dạ lam",
+        "scienceName": "Calathea xebrina",
+        "plantFamily": "Marataceae (Củ dong)",
+        "height": "0,8 - 1m2",
+        "roots": "Cây dạ lam có nguồn gốc từ Brazil, được du nhập và pân bố rộng khắp ở Việt Nam",
+        "desc": "Cây mọc thành bụi thưa, thân vươn thẳng với chiều cao cây trung bình từ 0,8-1,2m. Lá hình trứng, mép lá nguyên, gân lá nổi rõ, phiến rộng khoảng từ 15-20xm. Lá có màu xanh đậm ở mặt trên, quanh gân lá có màu trắng sữa,, mặt dưới lá có màu nhạt hơn. Lá cây dạ lam mọc cách cuống lá dài khi rụng để lại các khía màu nâu nhạt."
+      }
+    },
+    {
+      "id": 2,
+      "typeProduct": 2,
+      "src": "spx2-2",
+      "nameProduct": "Cây chân chim",
+      "rate": 2.5,
+      "currentPrice": 150000,
+      "oldPrice": 250000,
+      "descThumbnail": "Cây Ngọc Ngân là loại cây dành cho tình yêu! Đây là món quà bất ngờ để bạn tặng \"Người ấy\". Ngọc Ngân (Valentiane) không chỉ đẹp ở phiến lá xanh đốm trắng.",
+      "slideImages": [
+        {
+          "src": "spx2-1"
+        },
+        {
+          "src": "spx2-4"
+        },
+        {
+          "src": "spx2-5"
+        },
+        {
+          "src": "spx2-2"
+        },
+        {
+          "src": "spx2-3"
+        },
+        {
+          "src": "spx2-6"
+        },
+        {
+          "src": "spx2-7"
+        },
+        {
+          "src": "spx2-8"
+        },
+        {
+          "src": "spx2-9"
+        },
+        {
+          "src": "spx2-10"
+        }
+      ],
+      "info": {
+        "commonName": "Dạ lam",
+        "scienceName": "Calathea xebrina",
+        "plantFamily": "Marataceae (Củ dong)",
+        "height": "0,8 - 1m2",
+        "roots": "Cây dạ lam có nguồn gốc từ Brazil, được du nhập và pân bố rộng khắp ở Việt Nam",
+        "desc": "Cây mọc thành bụi thưa, thân vươn thẳng với chiều cao cây trung bình từ 0,8-1,2m. Lá hình trứng, mép lá nguyên, gân lá nổi rõ, phiến rộng khoảng từ 15-20xm. Lá có màu xanh đậm ở mặt trên, quanh gân lá có màu trắng sữa,, mặt dưới lá có màu nhạt hơn. Lá cây dạ lam mọc cách cuống lá dài khi rụng để lại các khía màu nâu nhạt."
+      }
+    },
+    {
+      "id": 3,
+      "typeProduct": 3,
+      "discount": "New",
+      "src": "spx2-3",
+      "nameProduct": "Cây chân chim",
+      "rate": 1.5,
+      "currentPrice": 250000,
+      "oldPrice": 250000,
+      "descThumbnail": "Cây Ngọc Ngân là loại cây dành cho tình yêu! Đây là món quà bất ngờ để bạn tặng \"Người ấy\". Ngọc Ngân (Valentiane) không chỉ đẹp ở phiến lá xanh đốm trắng.",
+      "slideImages": [
+        {
+          "src": "spx2-3"
+        },
+        {
+          "src": "spx2-1"
+        },
+        {
+          "src": "spx2-2"
+        },
+        {
+          "src": "spx2-4"
+        },
+        {
+          "src": "spx2-5"
+        },
+        {
+          "src": "spx2-6"
+        },
+        {
+          "src": "spx2-7"
+        },
+        {
+          "src": "spx2-8"
+        },
+        {
+          "src": "spx2-9"
+        },
+        {
+          "src": "spx2-10"
+        }
+      ],
+      "info": {
+        "commonName": "Dạ lam",
+        "scienceName": "Calathea xebrina",
+        "plantFamily": "Marataceae (Củ dong)",
+        "height": "0,8 - 1m2",
+        "roots": "Cây dạ lam có nguồn gốc từ Brazil, được du nhập và pân bố rộng khắp ở Việt Nam",
+        "desc": "Cây mọc thành bụi thưa, thân vươn thẳng với chiều cao cây trung bình từ 0,8-1,2m. Lá hình trứng, mép lá nguyên, gân lá nổi rõ, phiến rộng khoảng từ 15-20xm. Lá có màu xanh đậm ở mặt trên, quanh gân lá có màu trắng sữa,, mặt dưới lá có màu nhạt hơn. Lá cây dạ lam mọc cách cuống lá dài khi rụng để lại các khía màu nâu nhạt."
+      }
+    },
+    {
+      "id": 4,
+      "typeProduct": 4,
+      "src": "spx2-4",
+      "nameProduct": "Cây xương rồng",
+      "rate": 4.5,
+      "currentPrice": 250000,
+      "oldPrice": 250000,
+      "descThumbnail": "Cây Ngọc Ngân là loại cây dành cho tình yêu! Đây là món quà bất ngờ để bạn tặng \"Người ấy\". Ngọc Ngân (Valentiane) không chỉ đẹp ở phiến lá xanh đốm trắng.",
+      "slideImages": [
+        {
+          "src": "spx2-1"
+        },
+        {
+          "src": "spx2-7"
+        },
+        {
+          "src": "spx2-8"
+        },
+        {
+          "src": "spx2-9"
+        },
+        {
+          "src": "spx2-2"
+        },
+        {
+          "src": "spx2-3"
+        },
+        {
+          "src": "spx2-4"
+        },
+        {
+          "src": "spx2-5"
+        },
+        {
+          "src": "spx2-6"
+        },
+        {
+          "src": "spx2-10"
+        }
+      ],
+      "info": {
+        "commonName": "Dạ lam",
+        "scienceName": "Calathea xebrina",
+        "plantFamily": "Marataceae (Củ dong)",
+        "height": "0,8 - 1m2",
+        "roots": "Cây dạ lam có nguồn gốc từ Brazil, được du nhập và pân bố rộng khắp ở Việt Nam",
+        "desc": "Cây mọc thành bụi thưa, thân vươn thẳng với chiều cao cây trung bình từ 0,8-1,2m. Lá hình trứng, mép lá nguyên, gân lá nổi rõ, phiến rộng khoảng từ 15-20xm. Lá có màu xanh đậm ở mặt trên, quanh gân lá có màu trắng sữa,, mặt dưới lá có màu nhạt hơn. Lá cây dạ lam mọc cách cuống lá dài khi rụng để lại các khía màu nâu nhạt."
+      }
+    },
+    {
+      "id": 5,
+      "typeProduct": 5,
+      "src": "spx2-5",
+      "nameProduct": "Cây Dạ Lam",
+      "rate": 4,
+      "currentPrice": 220000,
+      "oldPrice": 250000,
+      "descThumbnail": "Cây Ngọc Ngân là loại cây dành cho tình yêu! Đây là món quà bất ngờ để bạn tặng \"Người ấy\". Ngọc Ngân (Valentiane) không chỉ đẹp ở phiến lá xanh đốm trắng.",
+      "slideImages": [
+        {
+          "src": "spx2-6"
+        },
+        {
+          "src": "spx2-7"
+        },
+        {
+          "src": "spx2-8"
+        },
+        {
+          "src": "spx2-9"
+        },
+        {
+          "src": "spx2-10"
+        },
+        {
+          "src": "spx2-1"
+        },
+        {
+          "src": "spx2-2"
+        },
+        {
+          "src": "spx2-3"
+        },
+        {
+          "src": "spx2-4"
+        },
+        {
+          "src": "spx2-5"
+        }
+      ],
+      "info": {
+        "commonName": "Dạ lam",
+        "scienceName": "Calathea xebrina",
+        "plantFamily": "Marataceae (Củ dong)",
+        "height": "0,8 - 1m2",
+        "roots": "Cây dạ lam có nguồn gốc từ Brazil, được du nhập và pân bố rộng khắp ở Việt Nam",
+        "desc": "Cây mọc thành bụi thưa, thân vươn thẳng với chiều cao cây trung bình từ 0,8-1,2m. Lá hình trứng, mép lá nguyên, gân lá nổi rõ, phiến rộng khoảng từ 15-20xm. Lá có màu xanh đậm ở mặt trên, quanh gân lá có màu trắng sữa,, mặt dưới lá có màu nhạt hơn. Lá cây dạ lam mọc cách cuống lá dài khi rụng để lại các khía màu nâu nhạt."
+      }
+    },
+    {
+      "id": 6,
+      "typeProduct": 6,
+      "discount": "-45%",
+      "src": "spx2-6",
+      "nameProduct": "Cây Danh Dự",
+      "rate": 5,
+      "currentPrice": 250000,
+      "oldPrice": 250000,
+      "descThumbnail": "Cây Ngọc Ngân là loại cây dành cho tình yêu! Đây là món quà bất ngờ để bạn tặng \"Người ấy\". Ngọc Ngân (Valentiane) không chỉ đẹp ở phiến lá xanh đốm trắng."
+    },
+    {
+      "id": 7,
+      "typeProduct": 7,
+      "src": "spx2-7",
+      "nameProduct": "Cây cọ ta",
+      "rate": 4.5,
+      "currentPrice": 240000,
+      "oldPrice": 250000,
+      "descThumbnail": "Cây Ngọc Ngân là loại cây dành cho tình yêu! Đây là món quà bất ngờ để bạn tặng \"Người ấy\". Ngọc Ngân (Valentiane) không chỉ đẹp ở phiến lá xanh đốm trắng."
+    },
+    {
+      "id": 8,
+      "typeProduct": 1,
+      "src": "spx2-8",
+      "nameProduct": "Cây Dạ Lam",
+      "rate": 4.5,
+      "currentPrice": 250000,
+      "oldPrice": 250000,
+      "descThumbnail": "Cây Ngọc Ngân là loại cây dành cho tình yêu! Đây là món quà bất ngờ để bạn tặng \"Người ấy\". Ngọc Ngân (Valentiane) không chỉ đẹp ở phiến lá xanh đốm trắng."
+    },
+    {
+      "id": 9,
+      "typeProduct": 2,
+      "src": "spx2-9",
+      "nameProduct": "Cây dứa nhỏ",
+      "rate": 4.5,
+      "currentPrice": 280000,
+      "oldPrice": 250000,
+      "descThumbnail": "Cây Ngọc Ngân là loại cây dành cho tình yêu! Đây là món quà bất ngờ để bạn tặng \"Người ấy\". Ngọc Ngân (Valentiane) không chỉ đẹp ở phiến lá xanh đốm trắng."
+    },
+    {
+      "id": 10,
+      "typeProduct": 2,
+      "src": "spx2-10",
+      "nameProduct": "Cây đa búp đỏ",
+      "rate": 4.5,
+      "currentPrice": 280000,
+      "oldPrice": 250000,
+      "descThumbnail": "Cây Ngọc Ngân là loại cây dành cho tình yêu! Đây là món quà bất ngờ để bạn tặng \"Người ấy\". Ngọc Ngân (Valentiane) không chỉ đẹp ở phiến lá xanh đốm trắng."
+    },
+    {
+      "id": 11,
+      "typeProduct": 1,
+      "src": "spx2-11",
+      "nameProduct": "Cây Dạ Lam",
+      "rate": 4.5,
+      "currentPrice": 250000,
+      "oldPrice": 250000,
+      "descThumbnail": "Cây Ngọc Ngân là loại cây dành cho tình yêu! Đây là món quà bất ngờ để bạn tặng \"Người ấy\". Ngọc Ngân (Valentiane) không chỉ đẹp ở phiến lá xanh đốm trắng."
+    },
+    {
+      "id": 12,
+      "typeProduct": 3,
+      "src": "spx2-12",
+      "nameProduct": "Cây dứa nhỏ",
+      "rate": 4.5,
+      "currentPrice": 280000,
+      "oldPrice": 250000,
+      "descThumbnail": "Cây Ngọc Ngân là loại cây dành cho tình yêu! Đây là món quà bất ngờ để bạn tặng \"Người ấy\". Ngọc Ngân (Valentiane) không chỉ đẹp ở phiến lá xanh đốm trắng."
+    },
+    {
+      "id": 14,
+      "typeProduct": 5,
+      "src": "spx2-13",
+      "nameProduct": "Cây đa búp đỏ",
+      "rate": 4.5,
+      "currentPrice": 280000,
+      "oldPrice": 250000,
+      "descThumbnail": "Cây Ngọc Ngân là loại cây dành cho tình yêu! Đây là món quà bất ngờ để bạn tặng \"Người ấy\". Ngọc Ngân (Valentiane) không chỉ đẹp ở phiến lá xanh đốm trắng."
+    },
+    {
+      "id": 15,
+      "typeProduct": 6,
+      "src": "spx2-14",
+      "nameProduct": "Cây đa búp đỏ",
+      "rate": 4.5,
+      "currentPrice": 270000,
+      "oldPrice": 250000,
+      "descThumbnail": "Cây Ngọc Ngân là loại cây dành cho tình yêu! Đây là món quà bất ngờ để bạn tặng \"Người ấy\". Ngọc Ngân (Valentiane) không chỉ đẹp ở phiến lá xanh đốm trắng."
+    },
+    {
+      "id": 16,
+      "typeProduct": 7,
+      "src": "spx2-15",
+      "nameProduct": "Cây đa búp đỏ",
+      "rate": 4.5,
+      "currentPrice": 280000,
+      "oldPrice": 250000,
+      "descThumbnail": "Cây Ngọc Ngân là loại cây dành cho tình yêu! Đây là món quà bất ngờ để bạn tặng \"Người ấy\". Ngọc Ngân (Valentiane) không chỉ đẹp ở phiến lá xanh đốm trắng."
+    },
+    {
+      "id": 17,
+      "typeProduct": 7,
+      "src": "spx2-15",
+      "nameProduct": "Cây đa búp đỏ",
+      "rate": 4.5,
+      "currentPrice": 500000,
+      "oldPrice": 250000,
+      "descThumbnail": "Cây Ngọc Ngân là loại cây dành cho tình yêu! Đây là món quà bất ngờ để bạn tặng \"Người ấy\". Ngọc Ngân (Valentiane) không chỉ đẹp ở phiến lá xanh đốm trắng."
+    },
+    {
+      "id": 18,
+      "typeProduct": 7,
+      "src": "spx2-15",
+      "nameProduct": "Cây đa búp đỏ",
+      "rate": 4.5,
+      "currentPrice": 280000,
+      "oldPrice": 250000,
+      "descThumbnail": "Cây Ngọc Ngân là loại cây dành cho tình yêu! Đây là món quà bất ngờ để bạn tặng \"Người ấy\". Ngọc Ngân (Valentiane) không chỉ đẹp ở phiến lá xanh đốm trắng."
+    },
+    {
+      "id": 19,
+      "typeProduct": 1,
+      "src": "spx2-15",
+      "nameProduct": "Cây đa búp đỏ",
+      "rate": 4.5,
+      "currentPrice": 280000,
+      "oldPrice": 250000,
+      "descThumbnail": "Cây Ngọc Ngân là loại cây dành cho tình yêu! Đây là món quà bất ngờ để bạn tặng \"Người ấy\". Ngọc Ngân (Valentiane) không chỉ đẹp ở phiến lá xanh đốm trắng."
+    },
+    {
+      "id": 20,
+      "typeProduct": 3,
+      "src": "spx2-15",
+      "nameProduct": "Cây đa búp đỏ",
+      "rate": 4.5,
+      "currentPrice": 280000,
+      "oldPrice": 250000,
+      "descThumbnail": "Cây Ngọc Ngân là loại cây dành cho tình yêu! Đây là món quà bất ngờ để bạn tặng \"Người ấy\". Ngọc Ngân (Valentiane) không chỉ đẹp ở phiến lá xanh đốm trắng."
+    },
+    {
+      "id": 21,
+      "typeProduct": 3,
+      "src": "spx2-15",
+      "nameProduct": "Cây đa búp đỏ",
+      "rate": 4.5,
+      "currentPrice": 99000,
+      "oldPrice": 250000,
+      "descThumbnail": "Cây Ngọc Ngân là loại cây dành cho tình yêu! Đây là món quà bất ngờ để bạn tặng \"Người ấy\". Ngọc Ngân (Valentiane) không chỉ đẹp ở phiến lá xanh đốm trắng."
+    },
+    {
+      "id": 22,
+      "typeProduct": 3,
+      "src": "spx2-15",
+      "nameProduct": "Cây đa búp đỏ",
+      "rate": 4.5,
+      "currentPrice": 590000,
+      "oldPrice": 250000,
+      "descThumbnail": "Cây Ngọc Ngân là loại cây dành cho tình yêu! Đây là món quà bất ngờ để bạn tặng \"Người ấy\". Ngọc Ngân (Valentiane) không chỉ đẹp ở phiến lá xanh đốm trắng."
+    },
+    {
+      "id": 23,
+      "typeProduct": 7,
+      "src": "spx2-15",
+      "nameProduct": "Cây đa búp đỏ",
+      "rate": 4.5,
+      "currentPrice": 610000,
+      "oldPrice": 250000,
+      "descThumbnail": "Cây Ngọc Ngân là loại cây dành cho tình yêu! Đây là món quà bất ngờ để bạn tặng \"Người ấy\". Ngọc Ngân (Valentiane) không chỉ đẹp ở phiến lá xanh đốm trắng."
+    },
+    {
+      "id": 24,
+      "typeProduct": 1,
+      "src": "spx2-15",
+      "nameProduct": "Cây đa búp đỏ",
+      "rate": 4.5,
+      "currentPrice": 1000000,
+      "oldPrice": 250000,
+      "descThumbnail": "Cây Ngọc Ngân là loại cây dành cho tình yêu! Đây là món quà bất ngờ để bạn tặng \"Người ấy\". Ngọc Ngân (Valentiane) không chỉ đẹp ở phiến lá xanh đốm trắng."
+    },
+    {
+      "id": 25,
+      "typeProduct": 5,
+      "src": "spx2-15",
+      "nameProduct": "Cây đa búp đỏ",
+      "rate": 4.5,
+      "currentPrice": 670000,
+      "oldPrice": 250000,
+      "descThumbnail": "Cây Ngọc Ngân là loại cây dành cho tình yêu! Đây là món quà bất ngờ để bạn tặng \"Người ấy\". Ngọc Ngân (Valentiane) không chỉ đẹp ở phiến lá xanh đốm trắng."
+    },
+    {
+      "id": 26,
+      "typeProduct": 1,
+      "src": "spx2-15",
+      "nameProduct": "Cây đa búp đỏ",
+      "rate": 4.5,
+      "currentPrice": 70000,
+      "oldPrice": 250000,
+      "descThumbnail": "Cây Ngọc Ngân là loại cây dành cho tình yêu! Đây là món quà bất ngờ để bạn tặng \"Người ấy\". Ngọc Ngân (Valentiane) không chỉ đẹp ở phiến lá xanh đốm trắng."
+    },
+    {
+      "id": 27,
+      "typeProduct": 5,
+      "src": "spx2-15",
+      "nameProduct": "Cây đa búp đỏ",
+      "rate": 4.5,
+      "currentPrice": 800000,
+      "oldPrice": 250000,
+      "descThumbnail": "Cây Ngọc Ngân là loại cây dành cho tình yêu! Đây là món quà bất ngờ để bạn tặng \"Người ấy\". Ngọc Ngân (Valentiane) không chỉ đẹp ở phiến lá xanh đốm trắng."
+    },
+    {
+      "id": 28,
+      "typeProduct": 4,
+      "src": "spx2-15",
+      "nameProduct": "Cây đa búp đỏ",
+      "rate": 4.5,
+      "currentPrice": 280000,
+      "oldPrice": 250000,
+      "descThumbnail": "Cây Ngọc Ngân là loại cây dành cho tình yêu! Đây là món quà bất ngờ để bạn tặng \"Người ấy\". Ngọc Ngân (Valentiane) không chỉ đẹp ở phiến lá xanh đốm trắng."
+    },
+    {
+      "id": 29,
+      "typeProduct": 2,
+      "src": "spx2-15",
+      "nameProduct": "Cây đa búp đỏ",
+      "rate": 4.5,
+      "currentPrice": 1100000,
+      "oldPrice": 250000,
+      "descThumbnail": "Cây Ngọc Ngân là loại cây dành cho tình yêu! Đây là món quà bất ngờ để bạn tặng \"Người ấy\". Ngọc Ngân (Valentiane) không chỉ đẹp ở phiến lá xanh đốm trắng."
+    },
+    {
+      "id": 30,
+      "typeProduct": 1,
+      "src": "spx2-15",
+      "nameProduct": "Cây đa búp đỏ",
+      "rate": 2.5,
+      "currentPrice": 280000,
+      "oldPrice": 250000,
+      "descThumbnail": "Cây Ngọc Ngân là loại cây dành cho tình yêu! Đây là món quà bất ngờ để bạn tặng \"Người ấy\". Ngọc Ngân (Valentiane) không chỉ đẹp ở phiến lá xanh đốm trắng."
+    },
+    {
+      "id": 31,
+      "typeProduct": 1,
+      "src": "spx2-15",
+      "nameProduct": "Cây đa búp đỏ",
+      "rate": 1.5,
+      "currentPrice": 280000,
+      "oldPrice": 250000,
+      "descThumbnail": "Cây Ngọc Ngân là loại cây dành cho tình yêu! Đây là món quà bất ngờ để bạn tặng \"Người ấy\". Ngọc Ngân (Valentiane) không chỉ đẹp ở phiến lá xanh đốm trắng."
+    }
+  ],
+  "payments": [
+    {
+      "infoCustomer": {
+        "fullName": "Phạm đức việt",
+        "phone": "0868869736",
+        "email": "Talaonghoc@gmail.com",
+        "address": "Kí túc xá phía tây, liên chiểu ,đà nẵng",
+        "note": "abc"
+      },
+      "products": [
+        {
+          "id": 1,
+          "src": "spx2-1",
+          "nameProduct": "Cây chân chim",
+          "currentPrice": 150000,
+          "amount": 1
+        },
+        {
+          "id": 2,
+          "src": "spx2-2",
+          "nameProduct": "Cây chân chim",
+          "currentPrice": 150000,
+          "amount": 1
+        },
+        {
+          "id": 3,
+          "src": "spx2-3",
+          "nameProduct": "Cây chân chim",
+          "currentPrice": 250000,
+          "amount": 2
+        }
+      ],
+      "isPayment": true,
+      "createdAt": "19/05/2021, 16:07:27",
+      "updatedAt": "19/05/2021, 16:07:43",
+      "id": 1,
+      "modeOfPayment": "Thanh toán tiền mặt khi nhận hàng"
+    }
+  ]
+}

@@ -2,6 +2,7 @@ extends ../base/base.pug
 
 include ../partials/mixin.pug
 include ../components/carousel.pug
+include ../components/loader.pug
 
 block variables 
     - var productDetail = productDetail
@@ -22,7 +23,9 @@ mixin productName
                 i(class="far fa-star")
 
 block content 
-    .product-detail 
+    +loader 
+    #toast
+    .product-detail
         .container 
             +page("Cây dạ lam")
             .product-detail__container 
@@ -59,7 +62,7 @@ block content
                                             .product-detail__amount-number 1
                                             .product-detail__amount-increase +
                                         .product-detail__button 
-                                            button.button.button-round.button-green  Mua ngay 
+                                            button.button.button-round.button-green(type="button")  Mua ngay 
                                             .product__icon.icon.icon-round
                                                 i(class="fas fa-search")
                                             .product__icon.icon.icon-round
@@ -79,19 +82,22 @@ block content
                             .product-detail__info-content 
                                 p 
                                     span.pr-2 Tên phổ thông:    
-                                    span=  commonName
+                                    span.commonName=  commonName
                                 p 
                                     span.pr-2 Tên khoa học:
-                                    span=  scienceName
+                                    span.scienceName=  scienceName
                                 p 
                                     span.pr-2 Họ thực vật:
-                                    span=  plantFamily
+                                    span.plantFamily=  plantFamily
                                 p 
                                     span.pr-2 Chiều cao:
-                                    span=  roots
-                                p=  roots
-                                p= desc
+                                    span.roots=  roots
+                                p.roots=  roots
+                                p.desc= desc
                         #menu2.tab-pane.fade ...
                         #menu3.tab-pane.fade ...
                 .product-detail__suggestions
                     +titleAndCarousel("product-detail__suggestions", "Sản phẩm cùng loại", "product-detail__suggestions",suggestionsData, 4)
+block script 
+    script(src="./js/star.js") 
+    script(src="./js/productDetail.js") 

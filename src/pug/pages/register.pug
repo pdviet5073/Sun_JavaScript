@@ -11,7 +11,7 @@ block content
             .register__container 
                 +page('Đăng ký')
                 .register__content
-                    form(action="#")
+                    form#register(action="#")
                         .register__title 
                             h2.text-uppercase thông tin cá nhân 
                         .row
@@ -24,7 +24,7 @@ block content
                             .col-sm-6.col-12 
                                 +input('Website của bạn', 'url', 'url')
                         .row 
-                            +input("Đăng ký nhận thông tin quan email", "checkbox", "checkbox")
+                            +input("Đăng ký nhận thông tin quan email", "checkbox", "checkNote")
                         .register__title 
                             h2.text-uppercase Thông tin tài khoản 
                         .row
@@ -34,6 +34,8 @@ block content
                                 +input('Nhập lại mật khẩu', 'password', 'rePassword')
                         .row.mt-4
                             .col-12 
-                                button.button.button-round--lg.button-white.mr-4 Quay lại
+                                button(type="button") 
+                                    a.button.button-round--lg.button-white.mr-4(href="index.html") Quay lại
                                 button.button.button-round--lg.button-green Đăng ký
-
+block script 
+    script(src="./js/register.js") 

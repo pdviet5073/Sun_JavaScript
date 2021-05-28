@@ -2,6 +2,7 @@ extends ../base/base.pug
 
 include ../components/productItem.pug
 include ../components/portfolio.pug
+include ../components/loader.pug
 include ../partials/mixin.pug
 
 block variables
@@ -24,11 +25,12 @@ mixin portfolioContainer
                         li.portfolio-color__item
                             a(href="#")
                                 span.portfolio-color__item-color(style=`background-color: ${item.hex }`)
-                                span.portfolio-color__item-text(onMouseOver=`this.style.color=${item.hex}`)= item.name 
+                                span.portfolio-color__item-text= item.name 
 
 block content
     .page__product
         .container 
+            #toast
             +page("Danh sách sản phẩm")
             .row 
                 .col-lg-3.col-md-4.d-md-block.d-none
@@ -36,7 +38,8 @@ block content
                 .col-lg-9.col-md-8.col-12
                     section.products-banner 
                         div.products-banner__img(style=`background-image: url(${bannerImg})`)
-                    section.products 
+                    section.products.position-relative
+                        +loader
                         .d-md-none.d-block.mt-5
                             +portfolioContainer
                         .products__top 
@@ -54,22 +57,24 @@ block content
                                         .products__right-sort 
                                             label.text-clamp.text-clamp--1(for="sort" ) Sắp xếp theo
                                             .products__right-select
-                                                - var sort = ["Tên sản phẩm", "Giá","Màu sắc"]
-                                                    select(name="sort" value="Tên sản phẩm")
-                                                        each item in sort 
-                                                            option(value=item)= item 
+                                                - var sort = [{title:"Nổi bật", value:""},{title:"Giá cao đến thấp", value: "desc"}, {title:"Giá thấp đến cao", value:"asc"}]
+                                                    select(name="sort"  onchange="handleChangeSelect(event)")
+                                                        each item, index in sort 
+                                                            option(value=item.value , class=`${index===0? 'select-default':""}`)= item.title 
                                         .products__right-show
                                             label.text-clamp.text-clamp--1(for="sort" ) Show
                                             .products__right-select
-                                                - var show = [6, 9,12, 15]
-                                                select(name="show" value="Tên sản phẩm")
+                                                - var show = [6, 9,10,12, 15]
+                                                select(name="show" value="12" id="amount-products" onchange="handleChangeSelect(event)")
                                                     each item in show 
-                                                        option(value=item)= item   
+                                                        if(item===12)
+                                                            option(value=item selected)= item
+                                                        else 
+                                                            option(value=item )= item     
                         .products__container
-                            
                             .tab-content
                                 #menu1.tab-pane.in.active
-                                    .row
+                                    .row#menu1Products
                                         each item, index in product
                                             if(index<12)
                                                 .col-lg-4.col-6.mx-auto
@@ -79,4 +84,6 @@ block content
                                         if(index<6)
                                             +productHorizontal(item)
                         include ../components/pagination.pug
-                                                 
+block script 
+    script(src="./js/star.js") 
+    script(src="./js/product.js") 

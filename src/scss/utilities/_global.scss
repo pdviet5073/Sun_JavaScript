@@ -93,13 +93,16 @@ button {
 
 .icon {
     @include flex(center, center);
+    cursor: pointer;
 }
 .icon-round {
     @include square(4rem, 50%);
     border: 1px #dddcdc solid;
+    @include transition(all, 0.2s, ease-in);
+
     &:hover {
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
+        color: $green;
+        border-color: $dark-green;
     }
     @include respond-to("lg") {
         @include square(3rem, 50%);

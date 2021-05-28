@@ -10,6 +10,9 @@
 @import "components/input";
 @import "components/logo";
 @import "components/popup";
+@import "components/_toast";
+@import "components/loader";
+@import "components/process";
 
 @import "pages/header";
 @import "pages/footer";
@@ -22,3 +25,6 @@
 @import "pages/register";
 @import "pages/logIn";
 @import "pages/contact";
+@import "pages/infoPayment";
+@import "pages/payment";
+@import "pages/paymentSuccess";

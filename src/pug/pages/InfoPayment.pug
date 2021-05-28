@@ -1,0 +1,100 @@
+extends ../base/base.pug
+
+include ../components/input.pug
+include ../partials/mixin.pug
+
+block variables
+
+mixin process 
+    .process-wrap.active-step2
+        .process-main
+            .col-3
+                .process-step-cont
+                    .process-step.step-1
+                    span.d.lg-block.d-none.process-label Mua hàng
+            .col-3
+                .process-step-cont
+                    .process-step.step-2
+                    span.process-label Thông tin khách hàng
+            .col-3
+                .process-step-cont
+                    .process-step.step-3
+                    span.process-label 
+mixin infoPayment__right 
+    .row 
+        .col-12
+            +title("Thông tin đơn hàng")
+            .infoPayment__product 
+        .col-12.mt-5
+            +title("Tổng tiền")
+            .infoPayment__total 
+                .d-flex.justify-content-between.infoPayment__total-tempPrice 
+                    p.infoPayment__total-text Tạm tính
+                    p.infoPayment__total-number 1.000 đ
+                .d-flex.justify-content-between.infoPayment__total-ship.infoPayment__total-text 
+                    p.infoPayment__total-text Phí vận chuyển
+                    p.infoPayment__total-number 0 đ
+                .d-flex.justify-content-between.infoPayment__total-sales 
+                    p.infoPayment__total-text Khuyến mãi
+                    p.infoPayment__total-number 0 đ
+                .d-flex.justify-content-between.infoPayment__total-money 
+                    p.infoPayment__total-text Thành tiền
+                    div
+                        p.infoPayment__total-number 20.000.000 đ
+                        p (Đã bao gồm VAT)
+block content
+    article.infoPayment 
+        .container 
+            .infoPayment__container 
+                +process
+                .infoPayment__content
+                    form#form-infoPayment.form(action='#')
+                        .row 
+                            block paymentLeft
+                                .col-lg-8.col-12
+                                    .infoPayment__left 
+                                        +title("Thông tin khách hàng")
+                                        .row 
+                                            .col-sm-7
+                                                .form-group.input__item 
+                                                    label.form-label(for='fullname') Tên đầy đủ
+                                                        i.fas.fa-star(aria-hidden='true')
+                                                    input#fullname.form-control(name='fullName', type='text', placeholder='VD: Hoa Lan')
+                                                    span.form-message
+                                            .col-sm-5
+                                                .form-group.input__item 
+                                                    label.form-label(for='phone') Số điện thoại
+                                                        i.fas.fa-star(aria-hidden='true')
+                                                    input#phone.form-control(name='phone', type='text', placeholder='VD: 0123456789')
+                                                    span.form-message
+                                            .col-sm-5
+                                                .form-group.input__item 
+                                                    label.form-label(for='email') Email
+                                                        i.fas.fa-star(aria-hidden='true')
+                                                    input#email.form-control(name='email', type='text', placeholder='VD: email@gmailcom')
+                                                    span.form-message
+                                            .col-sm-7
+                                                .form-group.input__item 
+                                                    label.form-label(for='address') Địa chỉ
+                                                        i.fas.fa-star(aria-hidden='true')
+                                                    input#address.form-control(name='address', type='text')
+                                                    span.form-message
+                                            .col-12
+                                                .form-group.input__item 
+                                                    label.form-label(for='note') Ghi chú cho đơn hàng
+                                                    textarea#note.form-control(name='note', type='text')
+                                                    span.form-message
+                                            .col-12.d-lg-block.d-none
+                                                button
+                                                    a.button.button-round--lg.button-white.d-block(href="cart.html")  Quay lại 
+                                                button.button.button-round--lg.button-green.ml-3 Tiếp tục thanh toán 
+                            block paymentRight
+                                .col-lg-4.col-12
+                                    .infoPayment__right 
+                                        +infoPayment__right
+                            .col-12.d-lg-none.d-block.mt-5.pt-5
+                                button
+                                    a.button-prev.button.button-round--lg.button-white.d-block(href="cart.html")  Quay lại 
+                                button.button.button-round--lg.button-green.ml-3 Tiếp tục thanh toán 
+block script
+    script(src="./js/infoPayment.js") 

@@ -5,6 +5,6 @@ mixin portfolio(name, data, title)
         +title(title)
         div(class= `${name}__content`)
             ul(class=`${name}__list`)
-                each item in data
-                    li(class=`${name}__item`)
+                each item, index in data
+                    li(class=`${name}__item ` value=index+1)
                         a(href="#")= item 

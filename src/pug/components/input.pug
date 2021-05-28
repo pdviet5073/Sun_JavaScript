@@ -1,9 +1,11 @@
 mixin input(label, type, name, typeTextarea)
-    div(class=`input__item ${type=='checkbox' ? 'input__item-checkbox': '' }`)
+    div(class=`input__item form-group mb-0 ${type=='checkbox' ? 'input__item-checkbox': '' }`)
         label(for=name)= label
-            i.fas.fa-star
-        .input
+            i.fas.fa-star(aria-hidden='true')
+        .input 
             if(!typeTextarea)
-                input(type=type, name= name)
+                input( id= name type=type, name= name)
             else 
                 textarea(name=name) 
+        span.form-message 
+

@@ -1,0 +1,40 @@
+.payment {
+    &__left {
+        @extend .infoPayment__left;
+    }
+    &__right {
+        @extend .infoPayment__right;
+    }
+    &__infoCustomer {
+        &-item + &-item {
+            margin-top: 1rem;
+        }
+        &-item {
+            @include flex(start);
+            gap: 2rem;
+
+            p {
+                &:first-child {
+                    font-weight: 600;
+                    width: 10rem;
+                    @include respond-to("sm") {
+                        width: auto;
+                    }
+                }
+            }
+        }
+    }
+    &__type {
+        &-item + &-item {
+            margin-top: 2rem;
+        }
+
+        label,
+        .form-message {
+            font-size: 1.5rem;
+        }
+        label {
+            font-weight: 500;
+        }
+    }
+}

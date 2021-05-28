@@ -37,4 +37,4 @@ mixin carouselImage(data, size, id)
                                 .row.mx-0
                                     each item, index in carouselContent
                                         div(class=` ${size==5 ? "carousel-image__item-row ":"col-md-2 col-12 pl-0  pb-1 pb-md-0  "}`)
-                                            img(src=`./assets/images/${item.src}.png`, alt="carousel-img", class="carousel-img ")
+                                            img(src=`./assets/images/${item.src}.png`, alt="carousel-img", class=`carousel-img-${size}`)

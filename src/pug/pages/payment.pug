@@ -1,0 +1,62 @@
+extends infoPayment.pug
+
+
+block paymentLeft
+    .col-lg-7.col-12
+        .payment__left 
+            .payment__infoCustomer 
+                +title("Thông tin khách hàng")
+                .payment__infoCustomer-content 
+                    .payment__infoCustomer-item 
+                        p Họ và tên: 
+                        p.payment__infoCustomer-name Phạm Đức Việt 
+                    .payment__infoCustomer-item 
+                        p  Email: 
+                        p.payment__infoCustomer-email talaonghoc@gmail.com
+                    .payment__infoCustomer-item 
+                        p  Số điện thoại:
+                        p.payment__infoCustomer-phone 0868867936
+                    .payment__infoCustomer-item 
+                        p  Địa chỉ: 
+                        p.payment__infoCustomer-address 16 Lý Thường Kiệt, Hải Châu, Đà Nẵng
+                    .payment__infoCustomer-item
+                        p Ghi chú:
+                        p.payment__infoCustomer-note Không có
+            .payment__infoCart.mt-5.pt-4
+                +infoPayment__right
+            .d-lg-block.d-none.mt-5
+                button
+                    a.button.button-round--lg.button-white.d-block(href="infoPayment.html" )  Quay lại 
+                button.button.button-round--lg.button-green.ml-3 Đặt hàng ngay 
+block paymentRight 
+    .col-lg-5.col-12
+        +title("Chọn hình thức thanh toán")
+        .payment__type 
+            .form-group
+                .col-12 
+                    .payment__type-item
+                        input#radio1.form-check-input(type='radio', name='modeOfPayment', value="Thanh toán tiền mặt khi nhận hàng" )
+                        label.pl-3.form-check-label(for='radio1')
+                            | Thanh toán khi nhận hàng
+                    .payment__type-item
+                        input#radio2.form-check-input(type='radio', name='modeOfPayment',value="Thanh toán bằng thẻ quốc tế Visa, Master, JCB" )
+                        label.pl-3.form-check-label(for='radio2')
+                            | Thanh toán bằng thẻ quốc tế Visa, Master, JCB
+                    .payment__type-item
+                        input#radio3.form-check-input(type='radio', name='modeOfPayment', value="Thẻ ATM nội địa/Internet Banking" )
+                        label.pl-3.form-check-label(for='radio3')
+                            | Thẻ ATM nội địa/Internet Banking (Miễn phí thanh toán)
+                    .payment__type-item
+                        input#radio4.form-check-input(type='radio', name='modeOfPayment',value="Thanh toán bằng ví MoMo" )
+                        label.pl-3.form-check-label(for='radio4')
+                            | Thanh toán bằng ví MoMo
+                    .payment__type-item
+                        input#radio5.form-check-input(type='radio', name='modeOfPayment',value="Thanh toán bằng ZaloPay" )
+                        label.pl-3.form-check-label(for='radio5')
+                            | Thanh toán bằng ZaloPay
+                    span.form-message
+
+
+block script
+    script(src="./js/infoPayment.js") 
+    script(src="./js/payment.js") 

@@ -4,16 +4,19 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "api": "json-server --watch db/db.json --port 3002"
     },
     "author": "",
     "license": "ISC",
     "dependencies": {
         "browser-sync": "^2.26.14",
+        "dotenv": "^9.0.1",
         "gulp": "^4.0.2",
         "gulp-concat": "^2.6.1",
         "gulp-pug": "^4.0.1",
         "gulp-sass": "^4.1.0",
-        "gulp-scss": "^1.4.0"
+        "gulp-scss": "^1.4.0",
+        "json-server": "^0.16.3"
     }
 }
